@@ -2248,11 +2248,27 @@
 
   </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <!-- =========================
        JAVASCRIPT
   ========================== -->
+function toggleUsdtQr() {
 
+  const qrDisplay =
+    document.getElementById("qrDisplay");
+
+  const button =
+    document.querySelector(".show-qr-button");
+
+  const isHidden =
+    qrDisplay.style.display === "none";
+
+  qrDisplay.style.display =
+    isHidden ? "block" : "none";
+
+  button.textContent =
+    isHidden ? "Hide QR Code" : "Show QR Code";
+
+}
   <script>
 
     /* -------------------------
@@ -2526,42 +2542,37 @@ function copyWallet(elementId, button) {
 /* =========================
    USDT TRC20 QR CODE
 ========================= */
-const showUsdtQrButton =
-  document.getElementById("showUsdtQr");
+<div class="qr-wrapper">
 
-const qrDisplay =
-  document.getElementById("qrDisplay");
+  <button
+    type="button"
+    class="show-qr-button"
+    onclick="toggleUsdtQr()"
+  >
+    Show QR Code
+  </button>
 
-const usdtQr =
-  document.getElementById("usdtQr");
+  <div
+    id="qrDisplay"
+    class="qr-display"
+    style="display: none;"
+  >
 
-const usdtWalletElement =
-  document.getElementById("usdtWallet");
+    <img
+      src="/lifora-usdt-trc20-qr.png"
+      alt="USDT TRC20 donation QR code"
+      width="220"
+      height="220"
+    >
 
-let usdtQrGenerated = false;
+    <p class="qr-label">
+      Scan to donate USDT
+    </p>
 
-showUsdtQrButton.addEventListener("click", function () {
+    <p class="qr-note">
+      Network: TRC20
+    </p>
 
-  if (!usdtQrGenerated) {
+  </div>
 
-    new QRCode(usdtQr, {
-      text: usdtWalletElement.textContent.trim(),
-      width: 200,
-      height: 200,
-      correctLevel: QRCode.CorrectLevel.H
-    });
-
-    usdtQrGenerated = true;
-  }
-
-  qrDisplay.style.display =
-    qrDisplay.style.display === "none"
-      ? "block"
-      : "none";
-
-  showUsdtQrButton.textContent =
-    qrDisplay.style.display === "block"
-      ? "Hide QR Code"
-      : "Show QR Code";
-
-});
+</div>
