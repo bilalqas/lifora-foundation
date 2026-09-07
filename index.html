@@ -50,6 +50,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
@@ -84,6 +85,28 @@
 
     .donate-nav:hover {
       background: #0d5141;
+    }
+
+    /* Always-visible Donate button for mobile */
+    .mobile-top-donate {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: #126b55;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1;
+      box-shadow: 0 8px 20px rgba(18,107,85,.16);
+      transition: .2s;
+    }
+
+    .mobile-top-donate:hover {
+      background: #0d5141;
+      color: #ffffff;
     }
 
     /* HERO */
@@ -425,6 +448,10 @@
         display: none;
       }
 
+      .mobile-top-donate {
+        display: inline-flex;
+      }
+
       .hero-grid,
       .about-grid {
         grid-template-columns: 1fr;
@@ -461,6 +488,20 @@
     }
 
     @media (max-width: 500px) {
+      .nav-inner {
+        height: 70px;
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+
+      .mobile-top-donate {
+        min-height: 40px;
+        padding: 9px 15px;
+        font-size: 13px;
+      }
+
       h1 {
         letter-spacing: -2px;
       }
@@ -482,7 +523,16 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="container nav-inner">
-      <a href="#" class="logo">LIFORA<span>.</span></a>
+      <a href="/" class="logo">LIFORA<span>.</span></a>
+
+      <!-- Visible only on mobile -->
+      <a
+        href="/donate"
+        class="mobile-top-donate"
+        aria-label="Donate to LIFORA Foundation"
+      >
+        Donate
+      </a>
 
       <div class="nav-links">
         <a href="#about">About</a>
@@ -553,66 +603,62 @@
     </div>
   </section>
 
- <!-- PROGRAMS -->
-<section class="programs" id="programs">
-  <div class="container">
+  <!-- PROGRAMS -->
+  <section class="programs" id="programs">
+    <div class="container">
 
-    <div class="section-heading">
-      <div class="eyebrow">OUR HUMANITARIAN WORK</div>
+      <div class="section-heading">
+        <div class="eyebrow">OUR HUMANITARIAN WORK</div>
 
-      <h2>Helping people where support matters most.</h2>
+        <h2>Helping people where support matters most.</h2>
 
-      <p>
-        LIFORA Foundation aims to support vulnerable individuals,
-        families and communities through practical humanitarian action.
-      </p>
+        <p>
+          LIFORA Foundation aims to support vulnerable individuals,
+          families and communities through practical humanitarian action.
+        </p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">🍲</div>
+          <h3>Food & Essential Relief</h3>
+          <p>
+            Supporting vulnerable families and communities with food,
+            essential supplies and basic necessities during times of hardship.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📚</div>
+          <h3>Education & Opportunity</h3>
+          <p>
+            Helping children and young people access education,
+            school supplies, learning opportunities and a brighter future.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🏥</div>
+          <h3>Health & Medical Support</h3>
+          <p>
+            Helping vulnerable people access essential healthcare,
+            medicines and medical support when assistance is needed.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🆘</div>
+          <h3>Emergency & Disaster Relief</h3>
+          <p>
+            Responding to emergencies and disasters with food,
+            essential supplies, shelter assistance and humanitarian support.
+          </p>
+        </div>
+
+      </div>
     </div>
-
-    <div class="cards">
-
-      <!-- FOOD -->
-      <div class="card">
-        <div class="icon">🍲</div>
-        <h3>Food & Essential Relief</h3>
-        <p>
-          Supporting vulnerable families and communities with food,
-          essential supplies and basic necessities during times of hardship.
-        </p>
-      </div>
-
-      <!-- EDUCATION -->
-      <div class="card">
-        <div class="icon">📚</div>
-        <h3>Education & Opportunity</h3>
-        <p>
-          Helping children and young people access education,
-          school supplies, learning opportunities and a brighter future.
-        </p>
-      </div>
-
-      <!-- HEALTH -->
-      <div class="card">
-        <div class="icon">🏥</div>
-        <h3>Health & Medical Support</h3>
-        <p>
-          Helping vulnerable people access essential healthcare,
-          medicines and medical support when assistance is needed.
-        </p>
-      </div>
-
-      <!-- EMERGENCY -->
-      <div class="card">
-        <div class="icon">🆘</div>
-        <h3>Emergency & Disaster Relief</h3>
-        <p>
-          Responding to emergencies and disasters with food,
-          essential supplies, shelter assistance and humanitarian support.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- ABOUT -->
   <section id="about">
@@ -673,7 +719,7 @@
       <div class="footer-grid">
 
         <div>
-          <a href="#" class="logo">LIFORA<span>.</span></a>
+          <a href="/" class="logo">LIFORA<span>.</span></a>
 
           <p>
             Creating hope, empowering lives and building
