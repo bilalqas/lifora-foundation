@@ -1191,7 +1191,32 @@
   color: var(--text-soft);
   text-align: center;
 }
+.show-qr-button {
+  border: 1px solid var(--green);
+  background: white;
+  color: var(--green);
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
 
+.show-qr-button:hover {
+  background: var(--green-light);
+}
+
+.qr-display {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#usdtQr {
+  display: inline-block;
+  background: white;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
 </style>
   </style>
 </head>
@@ -1917,11 +1942,33 @@
 
         </div>
 <div class="qr-wrapper">
-  <div id="usdtQr"></div>
 
-  <p class="qr-label">
-    Scan to copy the USDT TRC20 wallet address
-  </p>
+  <button
+    type="button"
+    class="show-qr-button"
+    id="showUsdtQr"
+  >
+    Show QR Code
+  </button>
+
+  <div
+    class="qr-display"
+    id="qrDisplay"
+    style="display: none;"
+  >
+
+    <div id="usdtQr"></div>
+
+    <p class="qr-label">
+      Scan this QR to copy the USDT TRC20 wallet address
+    </p>
+
+    <p class="qr-note">
+      Network: TRC20
+    </p>
+
+  </div>
+
 </div>
       </div>
 
@@ -2479,25 +2526,42 @@ function copyWallet(elementId, button) {
 /* =========================
    USDT TRC20 QR CODE
 ========================= */
+const showUsdtQrButton =
+  document.getElementById("showUsdtQr");
+
+const qrDisplay =
+  document.getElementById("qrDisplay");
+
+const usdtQr =
+  document.getElementById("usdtQr");
 
 const usdtWalletElement =
   document.getElementById("usdtWallet");
 
-const usdtQrElement =
-  document.getElementById("usdtQr");
+let usdtQrGenerated = false;
 
-if (usdtWalletElement && usdtQrElement) {
+showUsdtQrButton.addEventListener("click", function () {
 
-  new QRCode(usdtQrElement, {
-    text: usdtWalletElement.textContent.trim(),
-    width: 200,
-    height: 200,
-    correctLevel: QRCode.CorrectLevel.H
-  });
+  if (!usdtQrGenerated) {
 
-}
-}
-  </script>
+    new QRCode(usdtQr, {
+      text: usdtWalletElement.textContent.trim(),
+      width: 200,
+      height: 200,
+      correctLevel: QRCode.CorrectLevel.H
+    });
 
-</body>
-</html>
+    usdtQrGenerated = true;
+  }
+
+  qrDisplay.style.display =
+    qrDisplay.style.display === "none"
+      ? "block"
+      : "none";
+
+  showUsdtQrButton.textContent =
+    qrDisplay.style.display === "block"
+      ? "Hide QR Code"
+      : "Show QR Code";
+
+});
