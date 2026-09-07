@@ -35,74 +35,9 @@
     }
 
     /* NAVBAR */
-    /* TOP MOVING HUMANITARIAN BANNER */
-    .top-ticker {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 38px;
-      z-index: 1100;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      background: #102c26;
-      color: #ffffff;
-      border-bottom: 1px solid rgba(255,255,255,.10);
-    }
-
-    .ticker-track {
-      display: flex;
-      align-items: center;
-      width: max-content;
-      white-space: nowrap;
-      animation: liforaTicker 32s linear infinite;
-      will-change: transform;
-    }
-
-    .ticker-group {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .ticker-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0 28px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .2px;
-    }
-
-    .ticker-dot {
-      color: #e49b32;
-      font-size: 15px;
-    }
-
-    .top-ticker:hover .ticker-track {
-      animation-play-state: paused;
-    }
-
-    @keyframes liforaTicker {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .ticker-track {
-        animation: none;
-      }
-    }
-
     nav {
       position: fixed;
-      top: 38px;
+      top: 0;
       width: 100%;
       z-index: 1000;
       background: rgba(255,255,255,0.96);
@@ -172,9 +107,303 @@
       color: #ffffff;
     }
 
+    /* HUMANITARIAN BANNER CAROUSEL */
+    .banner-section {
+      padding: 110px 0 35px;
+      background: linear-gradient(180deg, #f6fbf8 0%, #ffffff 100%);
+    }
+
+    .banner-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 26px;
+    }
+
+    .banner-heading .mini-title {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: #e4f4ed;
+      color: #126b55;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .8px;
+    }
+
+    .banner-heading h2 {
+      margin-bottom: 8px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+    }
+
+    .banner-heading p {
+      color: #667873;
+      font-size: 16px;
+    }
+
+    .humanity-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      min-height: 355px;
+      background: #0e5e4b;
+      box-shadow: 0 24px 60px rgba(18,107,85,.16);
+    }
+
+    .slides-track {
+      display: flex;
+      width: 100%;
+      transition: transform .6s cubic-bezier(.22,.61,.36,1);
+    }
+
+    .humanity-slide {
+      min-width: 100%;
+      min-height: 355px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      isolation: isolate;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .humanity-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,49,40,.92) 0%,
+          rgba(10,49,40,.78) 42%,
+          rgba(10,49,40,.26) 72%,
+          rgba(10,49,40,.12) 100%
+        );
+    }
+
+    .slide-content {
+      width: min(610px, 72%);
+      padding: 54px 70px;
+      color: #ffffff;
+    }
+
+    .slide-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.20);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .slide-content h3 {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
+    }
+
+    .slide-content p {
+      max-width: 560px;
+      color: #eef7f3;
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    .slide-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .slide-donate,
+    .slide-more {
+      border: 0;
+      border-radius: 30px;
+      padding: 13px 21px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .slide-donate {
+      display: inline-block;
+      background: #ffffff;
+      color: #126b55;
+    }
+
+    .slide-donate:hover {
+      transform: translateY(-2px);
+    }
+
+    .slide-more {
+      background: rgba(255,255,255,.14);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,.34);
+    }
+
+    .slide-more:hover {
+      background: rgba(255,255,255,.22);
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      width: 48px;
+      height: 48px;
+      margin-top: -24px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,.94);
+      color: #126b55;
+      font-size: 26px;
+      font-weight: 900;
+      box-shadow: 0 8px 24px rgba(0,0,0,.14);
+      transition: .2s;
+    }
+
+    .slider-arrow:hover {
+      transform: scale(1.06);
+      background: #ffffff;
+    }
+
+    .slider-prev { left: 18px; }
+    .slider-next { right: 18px; }
+
+    .slider-dots {
+      position: absolute;
+      z-index: 6;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,.50);
+      transition: .2s;
+      padding: 0;
+    }
+
+    .slider-dot.active {
+      width: 28px;
+      border-radius: 999px;
+      background: #ffffff;
+    }
+
+    .slide-food {
+      background-image:
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-education {
+      background-image:
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-health {
+      background-image:
+        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-emergency {
+      background-image:
+        url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-together {
+      background-image:
+        url("https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    /* POPUP */
+    .cause-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(8,32,27,.66);
+      backdrop-filter: blur(7px);
+    }
+
+    .cause-modal.open { display: flex; }
+
+    .modal-card {
+      width: min(560px, 100%);
+      position: relative;
+      padding: 34px;
+      border-radius: 26px;
+      background: #ffffff;
+      box-shadow: 0 28px 90px rgba(0,0,0,.22);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 50%;
+      background: #eef7f3;
+      color: #126b55;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .modal-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      background: #e4f4ed;
+      font-size: 27px;
+    }
+
+    .modal-card h3 {
+      margin: 0 45px 10px 0;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .modal-card p {
+      color: #62756f;
+      margin-bottom: 24px;
+    }
+
+    .modal-donate {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 30px;
+      background: #126b55;
+      color: white;
+      font-weight: 800;
+    }
+
+    .modal-donate:hover { background: #0d5141; }
+
     /* HERO */
     .hero {
-      padding: 198px 0 100px;
+      padding: 90px 0 100px;
       background:
         radial-gradient(circle at 85% 20%, #dff3e9 0, transparent 30%),
         linear-gradient(135deg, #f4fbf7, #ffffff);
@@ -515,9 +744,28 @@
         display: inline-flex;
       }
 
-      .ticker-item {
-        padding: 0 20px;
-        font-size: 12px;
+      .banner-section {
+        padding-top: 105px;
+      }
+
+      .humanity-slider,
+      .humanity-slide {
+        min-height: 430px;
+      }
+
+      .slide-content {
+        width: 100%;
+        padding: 48px 58px 62px;
+      }
+
+      .humanity-slide::before {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10,49,40,.92) 0%,
+            rgba(10,49,40,.78) 62%,
+            rgba(10,49,40,.50) 100%
+          );
       }
 
       .hero-grid,
@@ -526,7 +774,7 @@
       }
 
       .hero {
-        padding-top: 160px;
+        padding-top: 70px;
       }
 
       .hero-card {
@@ -556,14 +804,6 @@
     }
 
     @media (max-width: 500px) {
-      .top-ticker {
-        height: 36px;
-      }
-
-      nav {
-        top: 36px;
-      }
-
       .nav-inner {
         height: 70px;
       }
@@ -578,9 +818,54 @@
         font-size: 13px;
       }
 
-      .ticker-item {
-        padding: 0 16px;
-        font-size: 11px;
+      .banner-section {
+        padding-top: 98px;
+      }
+
+      .banner-heading {
+        margin-bottom: 18px;
+      }
+
+      .humanity-slider,
+      .humanity-slide {
+        min-height: 470px;
+      }
+
+      .slide-content {
+        padding: 48px 30px 70px;
+      }
+
+      .slide-content h3 {
+        font-size: 36px;
+      }
+
+      .slide-content p {
+        font-size: 15px;
+      }
+
+      .slide-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .slide-donate,
+      .slide-more {
+        width: 100%;
+        text-align: center;
+      }
+
+      .slider-arrow {
+        width: 42px;
+        height: 42px;
+        margin-top: -21px;
+        font-size: 22px;
+      }
+
+      .slider-prev { left: 8px; }
+      .slider-next { right: 8px; }
+
+      .modal-card {
+        padding: 28px 22px;
       }
 
       h1 {
@@ -600,35 +885,6 @@
 </head>
 
 <body>
-
-  <!-- MOVING HUMANITARIAN BANNER -->
-  <div
-    class="top-ticker"
-    aria-label="LIFORA humanitarian focus areas"
-  >
-    <div class="ticker-track">
-
-      <div class="ticker-group">
-        <span class="ticker-item">🍲 Food &amp; Essential Relief <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">📚 Education &amp; Opportunity <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">🏥 Health &amp; Medical Support <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">🆘 Emergency &amp; Disaster Relief <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">🤝 Together for Humanity <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">❤️ Give Hope. Protect Dignity. <span class="ticker-dot">•</span></span>
-      </div>
-
-      <!-- Duplicate group creates a seamless continuous loop -->
-      <div class="ticker-group" aria-hidden="true">
-        <span class="ticker-item">🍲 Food &amp; Essential Relief <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">📚 Education &amp; Opportunity <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">🏥 Health &amp; Medical Support <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">🆘 Emergency &amp; Disaster Relief <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">🤝 Together for Humanity <span class="ticker-dot">•</span></span>
-        <span class="ticker-item">❤️ Give Hope. Protect Dignity. <span class="ticker-dot">•</span></span>
-      </div>
-
-    </div>
-  </div>
 
   <!-- NAVIGATION -->
   <nav>
@@ -652,6 +908,136 @@
       </div>
     </div>
   </nav>
+
+
+  <!-- HUMANITARIAN BANNER CAROUSEL -->
+  <section class="banner-section" aria-label="Humanitarian causes">
+    <div class="container">
+
+      <div class="banner-heading">
+        <div class="mini-title">HUMANITY IN ACTION</div>
+        <h2>See how compassion can become hope.</h2>
+        <p>
+          Explore the areas LIFORA Foundation aims to support.
+          You can donate directly from any banner.
+        </p>
+      </div>
+
+      <div class="humanity-slider" id="humanitySlider">
+
+        <div class="slides-track" id="slidesTrack">
+
+          <article class="humanity-slide slide-food">
+            <div class="slide-content">
+              <div class="slide-kicker">🍲 Food Relief</div>
+              <h3>No one should face hunger alone.</h3>
+              <p>
+                Help provide food and essential supplies to vulnerable
+                individuals and families facing difficult circumstances.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Donate for Food →</a>
+                <button type="button" class="slide-more"
+                  data-icon="🍲"
+                  data-title="Food & Essential Relief"
+                  data-text="LIFORA aims to support vulnerable families and communities with food, essential supplies and basic necessities during times of hardship.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-education">
+            <div class="slide-content">
+              <div class="slide-kicker">📚 Education</div>
+              <h3>Education can open a lifetime of opportunity.</h3>
+              <p>
+                Support children and young people with learning resources,
+                school supplies and access to educational opportunities.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Support Education →</a>
+                <button type="button" class="slide-more"
+                  data-icon="📚"
+                  data-title="Education & Opportunity"
+                  data-text="LIFORA aims to help children and young people access education, school supplies, learning opportunities and a brighter future.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-health">
+            <div class="slide-content">
+              <div class="slide-kicker">🏥 Health Support</div>
+              <h3>Health support can protect dignity and hope.</h3>
+              <p>
+                Help vulnerable people access essential healthcare,
+                medicines and medical assistance when support is needed.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Support Healthcare →</a>
+                <button type="button" class="slide-more"
+                  data-icon="🏥"
+                  data-title="Health & Medical Support"
+                  data-text="LIFORA aims to help vulnerable people access essential healthcare, medicines and medical support when assistance is needed.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-emergency">
+            <div class="slide-content">
+              <div class="slide-kicker">🆘 Emergency Relief</div>
+              <h3>When crisis strikes, timely help matters.</h3>
+              <p>
+                Support humanitarian response with food, essential supplies,
+                shelter assistance and urgent relief during emergencies.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Support Relief →</a>
+                <button type="button" class="slide-more"
+                  data-icon="🆘"
+                  data-title="Emergency & Disaster Relief"
+                  data-text="LIFORA aims to respond to emergencies and disasters with food, essential supplies, shelter assistance and humanitarian support.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-together">
+            <div class="slide-content">
+              <div class="slide-kicker">🤝 Together</div>
+              <h3>A kinder world is possible when people help people.</h3>
+              <p>
+                Every act of generosity can help create dignity,
+                opportunity and hope for someone facing hardship.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Donate Now →</a>
+                <button type="button" class="slide-more"
+                  data-icon="❤️"
+                  data-title="Hope Without Borders"
+                  data-text="LIFORA Foundation exists to bring people together around one simple belief: everyone deserves the chance to build a better future.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <button type="button" class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous banner">‹</button>
+        <button type="button" class="slider-arrow slider-next" id="sliderNext" aria-label="Next banner">›</button>
+
+        <div class="slider-dots" id="sliderDots" aria-label="Banner navigation"></div>
+
+      </div>
+
+    </div>
+  </section>
 
   <!-- HERO -->
   <header class="hero">
@@ -870,6 +1256,169 @@
 
     </div>
   </footer>
+
+
+  <!-- HUMANITARIAN POPUP -->
+  <div class="cause-modal" id="causeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close popup">×</button>
+
+      <div class="modal-icon" id="modalIcon">❤️</div>
+
+      <h3 id="modalTitle">Help create hope</h3>
+
+      <p id="modalText">
+        Your support can help turn compassion into meaningful humanitarian action.
+      </p>
+
+      <a href="/donate" class="modal-donate">
+        Go to Donate Page →
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const slider = document.getElementById("humanitySlider");
+      const track = document.getElementById("slidesTrack");
+      const slides = Array.from(document.querySelectorAll(".humanity-slide"));
+      const prevButton = document.getElementById("sliderPrev");
+      const nextButton = document.getElementById("sliderNext");
+      const dotsBox = document.getElementById("sliderDots");
+
+      let currentSlide = 0;
+      let autoTimer = null;
+      let touchStartX = 0;
+
+      function renderDots() {
+        dotsBox.innerHTML = "";
+
+        slides.forEach(function (_, index) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "slider-dot" + (index === currentSlide ? " active" : "");
+          dot.setAttribute("aria-label", "Go to banner " + (index + 1));
+
+          dot.addEventListener("click", function () {
+            goToSlide(index);
+            restartAuto();
+          });
+
+          dotsBox.appendChild(dot);
+        });
+      }
+
+      function goToSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+        track.style.transform = "translateX(-" + (currentSlide * 100) + "%)";
+        renderDots();
+      }
+
+      function nextSlide() {
+        goToSlide(currentSlide + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(currentSlide - 1);
+      }
+
+      function startAuto() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        stopAuto();
+
+        autoTimer = setInterval(function () {
+          nextSlide();
+        }, 5500);
+      }
+
+      function stopAuto() {
+        if (autoTimer) {
+          clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+
+      function restartAuto() {
+        stopAuto();
+        startAuto();
+      }
+
+      prevButton.addEventListener("click", function () {
+        prevSlide();
+        restartAuto();
+      });
+
+      nextButton.addEventListener("click", function () {
+        nextSlide();
+        restartAuto();
+      });
+
+      slider.addEventListener("mouseenter", stopAuto);
+      slider.addEventListener("mouseleave", startAuto);
+
+      slider.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+      }, { passive: true });
+
+      slider.addEventListener("touchend", function (event) {
+        const touchEndX = event.changedTouches[0].screenX;
+        const difference = touchStartX - touchEndX;
+
+        if (Math.abs(difference) > 45) {
+          if (difference > 0) nextSlide();
+          else prevSlide();
+
+          restartAuto();
+        }
+      }, { passive: true });
+
+      const modal = document.getElementById("causeModal");
+      const modalClose = document.getElementById("modalClose");
+      const modalIcon = document.getElementById("modalIcon");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalText = document.getElementById("modalText");
+
+      function openModal(button) {
+        modalIcon.textContent = button.dataset.icon || "❤️";
+        modalTitle.textContent = button.dataset.title || "Help create hope";
+        modalText.textContent = button.dataset.text || "";
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+        stopAuto();
+      }
+
+      function closeModal() {
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+        startAuto();
+      }
+
+      document.querySelectorAll(".slide-more").forEach(function (button) {
+        button.addEventListener("click", function () {
+          openModal(button);
+        });
+      });
+
+      modalClose.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) closeModal();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("open")) {
+          closeModal();
+        }
+      });
+
+      renderDots();
+      startAuto();
+    });
+  </script>
 
 </body>
 </html>
