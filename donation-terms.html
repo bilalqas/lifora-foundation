@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Donation Terms | LIFORA Foundation</title>
+
+  <meta
+    name="description"
+    content="Read LIFORA Foundation's donation terms, including information about contribution methods, designated giving, refunds, cryptocurrency, bank transfers, and current organizational status."
+  >
+
+  <style>
+    :root {
+      --green: #126b55;
+      --green-dark: #0d5141;
+      --green-soft: #e7f4ee;
+      --gold: #e49b32;
+      --gold-soft: #fff5e6;
+      --text: #16352d;
+      --muted: #65756f;
+      --line: #dce8e3;
+      --bg: #f7fbf9;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(18,107,85,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(18,107,85,.08);
+    }
+
+    .nav-inner {
+      height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #173d33;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      transition: .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--green);
+    }
+
+    .donate-nav,
+    .mobile-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 20px;
+
+      border-radius: 999px;
+
+      background: var(--green);
+      color: #ffffff !important;
+
+      font-weight: 800;
+
+      box-shadow: 0 8px 20px rgba(18,107,85,.16);
+    }
+
+    .donate-nav:hover,
+    .mobile-donate:hover {
+      background: var(--green-dark);
+    }
+
+    .mobile-donate {
+      display: none;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      padding: 150px 0 78px;
+
+      background:
+        radial-gradient(circle at top right, rgba(228,155,50,.12), transparent 34%),
+        linear-gradient(135deg, #f2faf6 0%, #ffffff 65%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 18px;
+
+      padding: 8px 14px;
+
+      border-radius: 999px;
+
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      max-width: 760px;
+
+      margin-bottom: 22px;
+
+      font-size: clamp(46px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      max-width: 760px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+    }
+
+    .hero-card {
+      padding: 34px;
+
+      border-radius: 30px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          145deg,
+          #126b55 0%,
+          #0b4d3e 100%
+        );
+
+      box-shadow:
+        0 30px 70px rgba(18,107,85,.22);
+    }
+
+    .hero-card .symbol {
+      width: 68px;
+      height: 68px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 22px;
+
+      border-radius: 20px;
+
+      background: rgba(255,255,255,.14);
+
+      font-size: 32px;
+    }
+
+    .hero-card h2 {
+      margin-bottom: 12px;
+
+      color: #fff;
+
+      font-size: 29px;
+      line-height: 1.12;
+    }
+
+    .hero-card p {
+      margin: 0;
+
+      color: #e9f5f0;
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       CONTENT LAYOUT
+    ========================== */
+
+    .terms-section {
+      padding: 82px 0 30px;
+    }
+
+    .terms-layout {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+
+      gap: 46px;
+      align-items: start;
+    }
+
+    .terms-nav {
+      position: sticky;
+      top: 112px;
+
+      padding: 24px;
+
+      border: 1px solid var(--line);
+      border-radius: 22px;
+
+      background: var(--bg);
+    }
+
+    .terms-nav h3 {
+      margin-bottom: 14px;
+
+      font-size: 16px;
+    }
+
+    .terms-nav a {
+      display: block;
+
+      padding: 8px 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      font-weight: 650;
+
+      transition: .2s ease;
+    }
+
+    .terms-nav a:hover {
+      color: var(--green);
+      transform: translateX(3px);
+    }
+
+    .terms-content {
+      min-width: 0;
+    }
+
+    .last-updated {
+      display: inline-flex;
+
+      margin-bottom: 26px;
+
+      padding: 7px 12px;
+
+      border-radius: 999px;
+
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .terms-block {
+      padding: 0 0 34px;
+
+      margin-bottom: 34px;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .terms-block:last-child {
+      border-bottom: 0;
+    }
+
+    .terms-block h2 {
+      margin-bottom: 14px;
+
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.16;
+      letter-spacing: -1.2px;
+    }
+
+    .terms-block h3 {
+      margin: 22px 0 8px;
+
+      font-size: 19px;
+    }
+
+    .terms-block p {
+      margin-bottom: 13px;
+
+      color: var(--muted);
+    }
+
+    .terms-block ul {
+      margin: 12px 0 14px 22px;
+    }
+
+    .terms-block li {
+      margin-bottom: 8px;
+
+      color: var(--muted);
+    }
+
+    .terms-block strong {
+      color: var(--text);
+    }
+
+    .notice {
+      margin: 20px 0;
+
+      padding: 22px;
+
+      border: 1px solid #f0dfbd;
+      border-radius: 18px;
+
+      background: #fffaf2;
+    }
+
+    .notice strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #78531c;
+    }
+
+    .notice p {
+      margin: 0;
+
+      color: #786d5c;
+    }
+
+    .green-note {
+      margin: 20px 0;
+
+      padding: 22px;
+
+      border: 1px solid #d7ebe3;
+      border-radius: 18px;
+
+      background: var(--green-soft);
+    }
+
+    .green-note strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--green);
+    }
+
+    .green-note p {
+      margin: 0;
+
+      color: var(--muted);
+    }
+
+    .inline-link {
+      color: var(--green);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      padding: 40px 0 20px;
+    }
+
+    .cta-box {
+      padding: 46px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      border-radius: 30px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #126b55 0%,
+          #0c4f40 100%
+        );
+    }
+
+    .cta-box h2 {
+      max-width: 620px;
+
+      margin-bottom: 10px;
+
+      color: #fff;
+
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.08;
+    }
+
+    .cta-box p {
+      max-width: 650px;
+
+      color: #e7f3ef;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      min-height: 50px;
+
+      padding: 13px 22px;
+
+      border-radius: 999px;
+
+      background: #fff;
+      color: var(--green);
+
+      font-weight: 800;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      margin-top: 90px;
+      padding: 60px 0 30px;
+
+      background: #0a3028;
+      color: #ffffff;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+
+      gap: 55px;
+
+      margin-bottom: 46px;
+    }
+
+    footer .logo {
+      display: inline-block;
+
+      margin-bottom: 18px;
+
+      color: #ffffff;
+
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    footer .logo span {
+      color: var(--gold);
+    }
+
+    .footer-about p {
+      max-width: 330px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 20px;
+
+      color: #ffffff;
+
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .footer-col a {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+
+      margin-bottom: 12px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+
+      transition:
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+
+      border-top:
+        1px solid rgba(255,255,255,.12);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 30px;
+
+      color: #91aea5;
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-status {
+      max-width: 650px;
+      text-align: right;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-donate {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-grid,
+      .terms-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .terms-nav {
+        position: static;
+      }
+
+      .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        height: 72px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      .mobile-donate {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 112px 0 64px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .terms-section {
+        padding-top: 62px;
+      }
+
+      .hero-card,
+      .terms-nav,
+      .notice,
+      .green-note {
+        padding: 24px;
+      }
+
+      .cta-box {
+        padding: 32px 26px;
+      }
+
+      footer {
+        margin-top: 70px;
+        padding: 48px 0 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-col h4 {
+        margin-bottom: 14px;
+      }
+
+      .footer-col a {
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav-inner">
+
+      <a href="/" class="logo">
+        LIFORA<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/our-impact">Impact</a>
+        <a href="/#contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+
+      <a href="/donate" class="mobile-donate">
+        Donate
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">
+          📄 DONATION TERMS
+        </div>
+
+        <h1>
+          Clear terms for responsible giving.
+        </h1>
+
+        <p>
+          These Donation Terms explain important conditions that apply when
+          you contribute to LIFORA Foundation through our website, including
+          card, bank-transfer and cryptocurrency methods when available.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="symbol">
+          🤝
+        </div>
+
+        <h2>
+          Please read these terms before contributing.
+        </h2>
+
+        <p>
+          By making a contribution, you confirm that you understand these
+          terms and the current organizational status of LIFORA Foundation.
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- TERMS -->
+  <main class="terms-section">
+    <div class="container terms-layout">
+
+      <aside class="terms-nav">
+        <h3>On this page</h3>
+
+        <a href="#acceptance">1. Acceptance</a>
+        <a href="#status">2. Organizational Status</a>
+        <a href="#voluntary">3. Voluntary Contributions</a>
+        <a href="#designated">4. Designated Giving</a>
+        <a href="#payment-methods">5. Payment Methods</a>
+        <a href="#bank">6. Bank Transfers</a>
+        <a href="#crypto">7. Cryptocurrency</a>
+        <a href="#fees">8. Fees & Currency</a>
+        <a href="#monthly">9. Monthly Giving</a>
+        <a href="#refunds">10. Refunds</a>
+        <a href="#eligibility">11. Donor Responsibilities</a>
+        <a href="#prohibited">12. Prohibited Activity</a>
+        <a href="#records">13. Receipts & Records</a>
+        <a href="#changes">14. Changes to Terms</a>
+        <a href="#contact">15. Contact</a>
+      </aside>
+
+      <div class="terms-content">
+
+        <div class="last-updated">
+          Last updated: 7 September 2026
+        </div>
+
+        <section class="terms-block" id="acceptance">
+          <h2>1. Acceptance of these Donation Terms</h2>
+
+          <p>
+            These Donation Terms apply to contributions made through or in
+            connection with the LIFORA Foundation website.
+          </p>
+
+          <p>
+            By making a contribution, you confirm that you have read and
+            understood these terms and agree that your contribution will be
+            handled subject to them and to applicable law.
+          </p>
+
+          <p>
+            You should also review our
+            <a class="inline-link" href="/how-donations-are-used">How Donations Are Used</a>,
+            <a class="inline-link" href="/refund-policy">Refund Policy</a>,
+            and
+            <a class="inline-link" href="/privacy-policy">Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section class="terms-block" id="status">
+          <h2>2. Current Organizational and Tax Status</h2>
+
+          <div class="notice">
+            <strong>Important organizational-status disclosure</strong>
+            <p>
+              LIFORA Foundation is currently in organizational development
+              and registration. It does not currently represent itself as a
+              registered charity, tax-exempt organization, or U.S. 501(c)(3)
+              organization.
+            </p>
+          </div>
+
+          <p>
+            Unless and until an applicable tax-exempt status is formally
+            obtained, contributions should not be assumed to be tax-deductible.
+          </p>
+
+          <p>
+            The use of the word “Foundation” in the LIFORA name does not by
+            itself mean that LIFORA has charitable or tax-exempt legal status.
+          </p>
+        </section>
+
+        <section class="terms-block" id="voluntary">
+          <h2>3. Voluntary Contributions</h2>
+
+          <p>
+            Contributions are voluntary. You are responsible for deciding
+            whether, how much, and by which available method you wish to give.
+          </p>
+
+          <p>
+            You confirm that any contribution you make is from funds that you
+            are legally entitled to use and that you are authorized to make
+            the transaction.
+          </p>
+        </section>
+
+        <section class="terms-block" id="designated">
+          <h2>4. Designated Giving and Cause Selection</h2>
+
+          <p>
+            Our donation page may allow you to select a particular cause,
+            such as Food & Essential Relief, Education & Opportunity,
+            Health & Medical Support, Emergency & Disaster Relief, or
+            “Where Needed Most.”
+          </p>
+
+          <p>
+            LIFORA intends to respect a donor's stated preference where
+            reasonably practical. However, a project or program may become
+            fully funded, delayed, unsafe, impractical, legally restricted,
+            unavailable, or otherwise unable to proceed as expected.
+          </p>
+
+          <p>
+            In those circumstances, and subject to applicable law and any
+            binding restriction, LIFORA may redirect the contribution to a
+            closely related humanitarian purpose or to an area of greatest need.
+          </p>
+
+          <p>
+            More information is available on our
+            <a class="inline-link" href="/how-donations-are-used">
+              How Donations Are Used
+            </a>
+            page.
+          </p>
+        </section>
+
+        <section class="terms-block" id="payment-methods">
+          <h2>5. Payment Methods</h2>
+
+          <p>
+            LIFORA may make one or more contribution methods available,
+            including card payments, international bank transfers, and
+            cryptocurrency.
+          </p>
+
+          <p>
+            Availability can change. A method shown on the website may be
+            inactive, limited, under review, or available only through a
+            third-party provider.
+          </p>
+
+          <h3>Card payments</h3>
+
+          <p>
+            Card payments will only be accepted after an appropriate payment
+            provider has been connected and enabled. LIFORA's website does not
+            currently collect or store complete card numbers directly.
+          </p>
+
+          <p>
+            When card processing is enabled, the applicable payment provider
+            may apply its own terms, verification procedures, fraud controls,
+            processing rules, and fees.
+          </p>
+        </section>
+
+        <section class="terms-block" id="bank">
+          <h2>6. International Bank Transfers</h2>
+
+          <div class="notice">
+            <strong>Personal receiving-account disclosure</strong>
+            <p>
+              The bank receiving account currently shown on LIFORA's donation
+              page is held in the personal name Muhammad Bilal Qasim while
+              LIFORA completes its organizational development and registration.
+              It is not currently represented as a registered-charity bank
+              account or tax-deductible donation account.
+            </p>
+          </div>
+
+          <p>
+            You are responsible for checking all transfer details before
+            authorizing a bank payment, including the account name, bank,
+            IBAN, SWIFT/BIC, currency, and any correspondent-bank details
+            required by your sending bank.
+          </p>
+
+          <p>
+            Your bank or intermediary banks may deduct fees from the amount
+            sent or received. LIFORA is not responsible for fees charged by
+            your bank, intermediary banks, or other financial institutions.
+          </p>
+        </section>
+
+        <section class="terms-block" id="crypto">
+          <h2>7. Cryptocurrency Contributions</h2>
+
+          <p>
+            Cryptocurrency transactions can be irreversible. Before sending
+            cryptocurrency, you are responsible for checking both the wallet
+            address and the correct blockchain network.
+          </p>
+
+          <ul>
+            <li>
+              Do not send an asset using an unsupported or incorrect network.
+            </li>
+            <li>
+              Do not rely only on the visual appearance of an address; verify
+              the full public address shown on the donation page.
+            </li>
+            <li>
+              Network, exchange, or wallet fees may reduce the amount received.
+            </li>
+            <li>
+              Blockchain transactions generally cannot be cancelled or reversed
+              after confirmation.
+            </li>
+          </ul>
+
+          <div class="green-note">
+            <strong>Tax status of crypto contributions</strong>
+            <p>
+              LIFORA does not currently represent cryptocurrency contributions
+              as tax-deductible donations.
+            </p>
+          </div>
+        </section>
+
+        <section class="terms-block" id="fees">
+          <h2>8. Processing Fees, Exchange Rates and Currency Conversion</h2>
+
+          <p>
+            Third-party providers, banks, card networks, cryptocurrency
+            platforms, wallets, or exchanges may charge transaction,
+            processing, network, conversion, or intermediary fees.
+          </p>
+
+          <p>
+            Where a contribution is converted from one currency or asset to
+            another, the final value received may differ because of exchange
+            rates, market movement, provider spreads, or fees.
+          </p>
+
+          <p>
+            Unless explicitly stated otherwise, LIFORA does not guarantee that
+            the full amount initiated by the donor will be received after
+            third-party charges.
+          </p>
+        </section>
+
+        <section class="terms-block" id="monthly">
+          <h2>9. Monthly Giving and Recurring Contributions</h2>
+
+          <p>
+            The website may allow a visitor to indicate a preference for
+            “Monthly” giving. A recurring payment is not created merely by
+            selecting that preference.
+          </p>
+
+          <p>
+            Recurring billing only becomes active when an enabled payment
+            provider clearly confirms a recurring-payment arrangement and the
+            donor authorizes it.
+          </p>
+
+          <p>
+            Any cancellation process for a future recurring card payment will
+            depend on the payment provider and any instructions displayed at
+            the time recurring payments are enabled.
+          </p>
+        </section>
+
+        <section class="terms-block" id="refunds">
+          <h2>10. Refunds, Mistakes and Unauthorized Transactions</h2>
+
+          <p>
+            Contributions are generally intended to be final, but certain
+            situations may be reviewed, including an accidental duplicate,
+            an incorrect amount, or a potentially unauthorized transaction.
+          </p>
+
+          <p>
+            Refund eligibility depends on the circumstances, the payment
+            method, whether funds have already been used or transferred,
+            provider rules, and applicable law.
+          </p>
+
+          <p>
+            Cryptocurrency and some bank transfers may be impossible to reverse.
+          </p>
+
+          <p>
+            Please review the complete
+            <a class="inline-link" href="/refund-policy">
+              Refund Policy
+            </a>.
+          </p>
+        </section>
+
+        <section class="terms-block" id="eligibility">
+          <h2>11. Donor Responsibilities</h2>
+
+          <p>
+            By making a contribution, you confirm that:
+          </p>
+
+          <ul>
+            <li>
+              you are legally permitted to make the contribution;
+            </li>
+            <li>
+              you are using funds, accounts, cards, wallets, or payment
+              instruments that you are authorized to use;
+            </li>
+            <li>
+              information you provide is accurate to the best of your knowledge;
+            </li>
+            <li>
+              your contribution is not made for an unlawful purpose; and
+            </li>
+            <li>
+              you understand the specific risks of the payment method you choose.
+            </li>
+          </ul>
+        </section>
+
+        <section class="terms-block" id="prohibited">
+          <h2>12. Fraud, Sanctions and Prohibited Activity</h2>
+
+          <p>
+            LIFORA may decline, hold, return, review, or report a transaction
+            where reasonably necessary to comply with applicable law, financial
+            institution requirements, sanctions obligations, anti-fraud
+            controls, anti-money-laundering requirements, or payment-provider
+            rules.
+          </p>
+
+          <p>
+            A contribution must not be used to facilitate money laundering,
+            sanctions evasion, fraud, terrorism financing, or any other
+            unlawful activity.
+          </p>
+        </section>
+
+        <section class="terms-block" id="records">
+          <h2>13. Receipts, Confirmations and Records</h2>
+
+          <p>
+            A payment confirmation, blockchain record, bank receipt, or
+            payment-provider receipt confirms a transaction but does not by
+            itself establish that a contribution is tax-deductible.
+          </p>
+
+          <p>
+            LIFORA may maintain transaction and donor records for accounting,
+            fraud prevention, reporting, compliance, dispute handling, and
+            operational purposes, subject to our
+            <a class="inline-link" href="/privacy-policy">
+              Privacy Policy
+            </a>.
+          </p>
+        </section>
+
+        <section class="terms-block" id="changes">
+          <h2>14. Changes to these Donation Terms</h2>
+
+          <p>
+            LIFORA may update these Donation Terms as payment methods,
+            organizational arrangements, legal requirements, policies, or
+            operational practices change.
+          </p>
+
+          <p>
+            The updated version will be posted on this page with a revised
+            “Last updated” date. Terms in effect at the time of a contribution
+            will generally govern that contribution, subject to applicable law.
+          </p>
+        </section>
+
+        <section class="terms-block" id="contact">
+          <h2>15. Questions and Contact</h2>
+
+          <p>
+            If you have a question about a contribution, transaction,
+            refund request, or these Donation Terms, please contact LIFORA
+            through the contact information provided on the website.
+          </p>
+
+          <p>
+            <a class="inline-link" href="/#contact">
+              Contact LIFORA →
+            </a>
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+
+        <div>
+          <h2>
+            Give with a clear understanding of the terms.
+          </h2>
+
+          <p>
+            Review our current donation methods and choose how you wish to
+            support LIFORA's humanitarian mission.
+          </p>
+        </div>
+
+        <a href="/donate" class="cta-button">
+          Go to Donate Page →
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">
+            LIFORA<span>.</span>
+          </a>
+
+          <p>
+            Creating hope, empowering lives and building a better world — together.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about">About Us</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/our-impact">Our Impact</a>
+          <a href="/donate">Donate</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="/#volunteer">Volunteer</a>
+          <a href="/#partner">Partner With Us</a>
+          <a href="/#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/donation-terms">Donation Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 LIFORA Foundation. All rights reserved.
+        </div>
+
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development
+          and does not currently represent itself as a registered charity
+          or tax-exempt organization.
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
