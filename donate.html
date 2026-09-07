@@ -152,6 +152,38 @@
       background: var(--green-dark);
     }
 
+    /* Always-visible mobile donation action */
+    .mobile-nav-actions {
+      display: none;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .mobile-top-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 42px;
+      padding: 10px 16px;
+
+      border-radius: 50px;
+
+      background: var(--green);
+      color: white;
+
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1;
+
+      box-shadow: 0 8px 20px rgba(15, 111, 92, 0.16);
+    }
+
+    .mobile-top-donate:hover {
+      background: var(--green-dark);
+      color: white;
+    }
+
     .mobile-menu-button {
       display: none;
 
@@ -1457,8 +1489,21 @@
 
     @media (max-width: 760px) {
 
+      .nav-inner {
+        gap: 12px;
+      }
+
+      .mobile-nav-actions {
+        display: flex;
+      }
+
       .mobile-menu-button {
         display: block;
+        flex-shrink: 0;
+      }
+
+      .mobile-top-donate {
+        flex-shrink: 0;
       }
 
       .nav-links {
@@ -1490,9 +1535,8 @@
         padding: 10px 0;
       }
 
-      .nav-donate {
-        text-align: center;
-        padding: 13px 20px !important;
+      .nav-links .nav-donate {
+        display: none;
       }
 
       .hero {
@@ -1551,6 +1595,23 @@
 
     @media (max-width: 500px) {
 
+      .brand {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+      }
+
+      .mobile-top-donate {
+        min-height: 40px;
+        padding: 9px 13px;
+        font-size: 12px;
+      }
+
+      .mobile-menu-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
       .hero h1 {
         letter-spacing: -2px;
       }
@@ -1588,15 +1649,27 @@
         LIFORA<span>.</span>
       </a>
 
-      <button
-        class="mobile-menu-button"
-        id="mobileMenuButton"
-        type="button"
-        aria-label="Open navigation"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
+      <div class="mobile-nav-actions">
+
+        <a
+          href="/donate"
+          class="mobile-top-donate"
+          aria-label="Donate to LIFORA Foundation"
+        >
+          Donate
+        </a>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+      </div>
 
       <div
         class="nav-links"
