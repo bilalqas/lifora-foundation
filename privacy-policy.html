@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy | LIFORA Foundation</title>
+
+  <meta
+    name="description"
+    content="Read LIFORA Foundation's Privacy Policy, including how website, donation, payment, analytics, contact, and technical information may be collected and used."
+  >
+
+  <style>
+    :root {
+      --green: #126b55;
+      --green-dark: #0d5141;
+      --green-soft: #e7f4ee;
+      --gold: #e49b32;
+      --text: #16352d;
+      --muted: #65756f;
+      --line: #dce8e3;
+      --bg: #f7fbf9;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(18,107,85,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(18,107,85,.08);
+    }
+
+    .nav-inner {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #173d33;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .donate-nav,
+    .mobile-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 20px;
+      border-radius: 999px;
+
+      background: var(--green);
+      color: #fff !important;
+
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(18,107,85,.16);
+    }
+
+    .donate-nav:hover,
+    .mobile-donate:hover {
+      background: var(--green-dark);
+    }
+
+    .mobile-donate {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 150px 0 78px;
+
+      background:
+        radial-gradient(circle at top right, rgba(228,155,50,.12), transparent 34%),
+        linear-gradient(135deg, #f2faf6 0%, #ffffff 65%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 18px;
+      padding: 8px 14px;
+
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+
+      font-size: clamp(46px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-card {
+      padding: 34px;
+
+      border-radius: 30px;
+      color: #fff;
+
+      background:
+        linear-gradient(
+          145deg,
+          #126b55 0%,
+          #0b4d3e 100%
+        );
+
+      box-shadow:
+        0 30px 70px rgba(18,107,85,.22);
+    }
+
+    .hero-card .symbol {
+      width: 68px;
+      height: 68px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 22px;
+
+      border-radius: 20px;
+      background: rgba(255,255,255,.14);
+
+      font-size: 32px;
+    }
+
+    .hero-card h2 {
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: 29px;
+      line-height: 1.12;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: #e9f5f0;
+      font-size: 15px;
+    }
+
+    /* POLICY CONTENT */
+    .policy-section {
+      padding: 82px 0 30px;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .policy-nav {
+      position: sticky;
+      top: 112px;
+
+      padding: 24px;
+
+      border: 1px solid var(--line);
+      border-radius: 22px;
+
+      background: var(--bg);
+    }
+
+    .policy-nav h3 {
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    .policy-nav a {
+      display: block;
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+      transition: .2s ease;
+    }
+
+    .policy-nav a:hover {
+      color: var(--green);
+      transform: translateX(3px);
+    }
+
+    .policy-content {
+      min-width: 0;
+    }
+
+    .last-updated {
+      display: inline-flex;
+
+      margin-bottom: 26px;
+      padding: 7px 12px;
+
+      border-radius: 999px;
+
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .policy-block {
+      padding-bottom: 34px;
+      margin-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .policy-block:last-child {
+      border-bottom: 0;
+    }
+
+    .policy-block h2 {
+      margin-bottom: 14px;
+
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.16;
+      letter-spacing: -1.2px;
+    }
+
+    .policy-block h3 {
+      margin: 22px 0 8px;
+      font-size: 19px;
+    }
+
+    .policy-block p {
+      margin-bottom: 13px;
+      color: var(--muted);
+    }
+
+    .policy-block ul {
+      margin: 12px 0 14px 22px;
+    }
+
+    .policy-block li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .notice {
+      margin: 20px 0;
+      padding: 22px;
+
+      border: 1px solid #f0dfbd;
+      border-radius: 18px;
+
+      background: #fffaf2;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #78531c;
+    }
+
+    .notice p {
+      margin: 0;
+      color: #786d5c;
+    }
+
+    .green-note {
+      margin: 20px 0;
+      padding: 22px;
+
+      border: 1px solid #d7ebe3;
+      border-radius: 18px;
+
+      background: var(--green-soft);
+    }
+
+    .green-note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--green);
+    }
+
+    .green-note p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .inline-link {
+      color: var(--green);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 40px 0 20px;
+    }
+
+    .cta-box {
+      padding: 46px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      border-radius: 30px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #126b55 0%,
+          #0c4f40 100%
+        );
+    }
+
+    .cta-box h2 {
+      max-width: 620px;
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.08;
+    }
+
+    .cta-box p {
+      max-width: 650px;
+      color: #e7f3ef;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      min-height: 50px;
+      padding: 13px 22px;
+
+      border-radius: 999px;
+
+      background: #fff;
+      color: var(--green);
+
+      font-weight: 800;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 90px;
+      padding: 60px 0 30px;
+
+      background: #0a3028;
+      color: #ffffff;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+      gap: 55px;
+      margin-bottom: 46px;
+    }
+
+    footer .logo {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #fff;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    footer .logo span {
+      color: var(--gold);
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      color: #b9d4cc;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .footer-col a {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+
+      margin-bottom: 12px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+
+      transition:
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.12);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 30px;
+
+      color: #91aea5;
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-status {
+      max-width: 650px;
+      text-align: right;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-donate {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-grid,
+      .policy-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .policy-nav {
+        position: static;
+      }
+
+      .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        height: 72px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      .mobile-donate {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 112px 0 64px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .policy-section {
+        padding-top: 62px;
+      }
+
+      .hero-card,
+      .policy-nav,
+      .notice,
+      .green-note {
+        padding: 24px;
+      }
+
+      .cta-box {
+        padding: 32px 26px;
+      }
+
+      footer {
+        margin-top: 70px;
+        padding: 48px 0 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-col h4 {
+        margin-bottom: 14px;
+      }
+
+      .footer-col a {
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav-inner">
+
+      <a href="/" class="logo">
+        LIFORA<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/our-impact">Impact</a>
+        <a href="/#contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+
+      <a href="/donate" class="mobile-donate">
+        Donate
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">
+          🔒 PRIVACY POLICY
+        </div>
+
+        <h1>
+          Your privacy matters.
+        </h1>
+
+        <p>
+          This Privacy Policy explains what information LIFORA Foundation may
+          receive through its website, donations, communications, analytics,
+          and third-party service providers, and how that information may be
+          used and protected.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="symbol">
+          🛡️
+        </div>
+
+        <h2>
+          We aim to collect only what is reasonably needed.
+        </h2>
+
+        <p>
+          LIFORA does not currently operate its own card-processing system.
+          When card payments are enabled, complete card details will be handled
+          by the applicable payment provider rather than stored directly by
+          this website.
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- POLICY -->
+  <main class="policy-section">
+    <div class="container policy-layout">
+
+      <aside class="policy-nav">
+        <h3>On this page</h3>
+        <a href="#scope">1. Scope</a>
+        <a href="#information">2. Information We May Receive</a>
+        <a href="#technical">3. Website & Technical Data</a>
+        <a href="#analytics">4. Analytics & Cloudflare</a>
+        <a href="#donations">5. Donation Information</a>
+        <a href="#card">6. Card Payments</a>
+        <a href="#bank">7. Bank Transfers</a>
+        <a href="#crypto">8. Cryptocurrency</a>
+        <a href="#use">9. How Information May Be Used</a>
+        <a href="#sharing">10. Sharing & Service Providers</a>
+        <a href="#sale">11. Sale of Personal Information</a>
+        <a href="#security">12. Security</a>
+        <a href="#retention">13. Retention</a>
+        <a href="#international">14. International Processing</a>
+        <a href="#rights">15. Privacy Requests</a>
+        <a href="#children">16. Children</a>
+        <a href="#links">17. External Services</a>
+        <a href="#changes">18. Changes</a>
+        <a href="#contact">19. Contact</a>
+      </aside>
+
+      <div class="policy-content">
+
+        <div class="last-updated">
+          Last updated: 7 September 2026
+        </div>
+
+        <section class="policy-block" id="scope">
+          <h2>1. Scope of this Privacy Policy</h2>
+
+          <p>
+            This Privacy Policy applies to information handled in connection
+            with the LIFORA Foundation website and related communications,
+            donation activity, analytics, and online services.
+          </p>
+
+          <p>
+            It does not replace the privacy policies of banks, payment
+            processors, cryptocurrency platforms, wallet providers, hosting
+            companies, or other third parties that may process information
+            independently.
+          </p>
+        </section>
+
+        <section class="policy-block" id="information">
+          <h2>2. Information We May Receive</h2>
+
+          <p>
+            Depending on how you interact with LIFORA, information may include:
+          </p>
+
+          <ul>
+            <li>your name;</li>
+            <li>email address or other contact information you choose to provide;</li>
+            <li>messages, enquiries, or correspondence you send to LIFORA;</li>
+            <li>donation amount, currency, cause preference, and payment method;</li>
+            <li>transaction references or payment confirmations;</li>
+            <li>bank-transfer reference information;</li>
+            <li>cryptocurrency transaction hashes and public wallet information;</li>
+            <li>technical website information such as IP-related, browser, device, or request data processed by hosting/security providers; and</li>
+            <li>other information you voluntarily provide.</li>
+          </ul>
+
+          <p>
+            LIFORA does not ask donors to provide passwords, private keys,
+            seed phrases, or recovery phrases.
+          </p>
+        </section>
+
+        <section class="policy-block" id="technical">
+          <h2>3. Website and Technical Information</h2>
+
+          <p>
+            When you visit the website, technical information may be processed
+            automatically by internet infrastructure, hosting, security,
+            analytics, or content-delivery providers.
+          </p>
+
+          <p>
+            This may include request information, approximate location derived
+            from network data, device type, browser information, pages visited,
+            referring source, performance information, and security-related
+            signals.
+          </p>
+
+          <p>
+            Some of this information may be necessary to deliver the website,
+            protect it from abuse, diagnose problems, understand traffic, and
+            improve performance.
+          </p>
+        </section>
+
+        <section class="policy-block" id="analytics">
+          <h2>4. Analytics, Hosting and Cloudflare</h2>
+
+          <p>
+            LIFORA uses Cloudflare infrastructure for services associated with
+            the website, including hosting, DNS, content delivery, security,
+            and analytics tools where enabled.
+          </p>
+
+          <p>
+            These services may process technical request and website-usage
+            information in order to provide, protect, analyze, and improve
+            website delivery.
+          </p>
+
+          <div class="green-note">
+            <strong>Website statistics</strong>
+            <p>
+              LIFORA may use aggregated or technical website analytics to
+              understand visits, page views, traffic sources, countries,
+              device categories, and website performance.
+            </p>
+          </div>
+        </section>
+
+        <section class="policy-block" id="donations">
+          <h2>5. Donation and Contribution Information</h2>
+
+          <p>
+            If you make a contribution, LIFORA may receive or maintain
+            information needed to identify, reconcile, document, or respond
+            to the transaction.
+          </p>
+
+          <p>
+            This may include the contribution amount, currency, date,
+            payment method, cause preference, transaction reference,
+            payment-provider information, or information provided with a
+            bank transfer.
+          </p>
+
+          <p>
+            Donation information may be used for accounting, record keeping,
+            fraud prevention, compliance, supporter service, dispute handling,
+            and internal reporting.
+          </p>
+        </section>
+
+        <section class="policy-block" id="card">
+          <h2>6. Card Payments</h2>
+
+          <p>
+            Card payments are not currently active on the LIFORA website.
+          </p>
+
+          <p>
+            When card payments are enabled, LIFORA intends to use an established
+            third-party payment provider so that complete card details are
+            submitted to and processed by that provider rather than stored
+            directly by LIFORA's website.
+          </p>
+
+          <div class="notice">
+            <strong>Complete card numbers</strong>
+            <p>
+              LIFORA does not currently collect or store complete card numbers,
+              card security codes, or online-banking passwords directly on this website.
+            </p>
+          </div>
+
+          <p>
+            The payment provider may independently collect identity,
+            transaction, fraud-prevention, device, and payment information
+            under its own privacy terms.
+          </p>
+        </section>
+
+        <section class="policy-block" id="bank">
+          <h2>7. Bank Transfers</h2>
+
+          <p>
+            When you make a bank transfer, banks and financial institutions
+            involved in the transaction may process personal and financial
+            information independently.
+          </p>
+
+          <p>
+            LIFORA may receive information displayed on the incoming payment,
+            such as the sender name, payment reference, amount, currency,
+            sending institution, or other information transmitted through
+            the banking system.
+          </p>
+
+          <p>
+            LIFORA does not control what information your bank or intermediary
+            financial institutions collect or retain.
+          </p>
+        </section>
+
+        <section class="policy-block" id="crypto">
+          <h2>8. Cryptocurrency Contributions</h2>
+
+          <p>
+            Public blockchains are generally transparent. A cryptocurrency
+            transaction may permanently record information such as the sending
+            address, receiving address, transaction hash, asset, amount, time,
+            and network.
+          </p>
+
+          <p>
+            Blockchain records may remain publicly accessible even if LIFORA
+            removes information from its own systems.
+          </p>
+
+          <p>
+            If you use an exchange, wallet provider, or other cryptocurrency
+            service, that provider may separately collect and process personal
+            information under its own policies.
+          </p>
+        </section>
+
+        <section class="policy-block" id="use">
+          <h2>9. How Information May Be Used</h2>
+
+          <p>
+            LIFORA may use information for purposes such as:
+          </p>
+
+          <ul>
+            <li>operating and maintaining the website;</li>
+            <li>responding to enquiries and supporter communications;</li>
+            <li>processing, reconciling, and documenting contributions;</li>
+            <li>reviewing refund or transaction issues;</li>
+            <li>fraud prevention and security;</li>
+            <li>accounting, record keeping, and financial controls;</li>
+            <li>legal, regulatory, banking, and compliance requirements;</li>
+            <li>website analytics and performance improvement;</li>
+            <li>investigating misuse or suspicious activity;</li>
+            <li>protecting LIFORA, supporters, beneficiaries, and service providers; and</li>
+            <li>other purposes reasonably related to the interaction for which information was provided.</li>
+          </ul>
+        </section>
+
+        <section class="policy-block" id="sharing">
+          <h2>10. Sharing with Service Providers and Other Parties</h2>
+
+          <p>
+            LIFORA may need to share or allow access to information with
+            third parties that provide services or are involved in a transaction.
+          </p>
+
+          <p>
+            These may include:
+          </p>
+
+          <ul>
+            <li>website hosting, DNS, security, and analytics providers;</li>
+            <li>payment processors and card networks when card payments are enabled;</li>
+            <li>banks and financial institutions;</li>
+            <li>accountants, professional advisers, or compliance service providers;</li>
+            <li>technology and communications providers;</li>
+            <li>fraud-prevention or security providers;</li>
+            <li>government, regulatory, law-enforcement, or legal authorities where required or appropriate; and</li>
+            <li>other parties where reasonably necessary to complete a transaction or protect legal rights.</li>
+          </ul>
+
+          <p>
+            Third parties may process information under their own privacy
+            notices and legal obligations.
+          </p>
+        </section>
+
+        <section class="policy-block" id="sale">
+          <h2>11. Sale of Personal Information</h2>
+
+          <p>
+            LIFORA does not sell personal information to advertisers or data
+            brokers for monetary consideration.
+          </p>
+
+          <p>
+            Information may still be processed by service providers where
+            necessary to operate the website, process transactions, provide
+            security, comply with law, or perform the functions described in
+            this policy.
+          </p>
+        </section>
+
+        <section class="policy-block" id="security">
+          <h2>12. Information Security</h2>
+
+          <p>
+            LIFORA aims to use reasonable technical and organizational measures
+            appropriate to its current size, systems, and activities.
+          </p>
+
+          <p>
+            However, no internet transmission, email, website, bank transfer,
+            blockchain transaction, or storage system can be guaranteed to be
+            completely secure.
+          </p>
+
+          <p>
+            You should never send LIFORA passwords, private keys, seed phrases,
+            recovery phrases, or other secret authentication credentials.
+          </p>
+        </section>
+
+        <section class="policy-block" id="retention">
+          <h2>13. Data Retention</h2>
+
+          <p>
+            LIFORA may retain information for as long as reasonably necessary
+            for the purposes described in this policy, including transaction
+            records, accounting, dispute handling, fraud prevention, compliance,
+            security, and legal obligations.
+          </p>
+
+          <p>
+            Different categories of information may be retained for different
+            periods depending on operational and legal needs.
+          </p>
+
+          <p>
+            Public blockchain information is not controlled by LIFORA and may
+            remain permanently available on the applicable blockchain.
+          </p>
+        </section>
+
+        <section class="policy-block" id="international">
+          <h2>14. International Processing</h2>
+
+          <p>
+            LIFORA's website may be accessed internationally, and service
+            providers may process information in countries different from
+            your own.
+          </p>
+
+          <p>
+            By using global hosting, banking, payment, analytics, or
+            cryptocurrency infrastructure, information may be transmitted
+            across national borders subject to the laws and safeguards
+            applicable to the relevant service provider.
+          </p>
+        </section>
+
+        <section class="policy-block" id="rights">
+          <h2>15. Privacy Questions and Requests</h2>
+
+          <p>
+            Depending on where you live and applicable law, you may have
+            certain rights relating to personal information, such as requesting
+            access, correction, deletion, or information about processing.
+          </p>
+
+          <p>
+            These rights are not absolute and may be limited by legal,
+            accounting, fraud-prevention, security, transaction-record,
+            or compliance requirements.
+          </p>
+
+          <p>
+            You may contact LIFORA through the website to make a privacy enquiry.
+          </p>
+        </section>
+
+        <section class="policy-block" id="children">
+          <h2>16. Children's Privacy</h2>
+
+          <p>
+            LIFORA's donation and general website services are not designed
+            to knowingly collect sensitive personal information from children
+            without appropriate involvement from a parent, guardian, or other
+            legally authorized person where required.
+          </p>
+
+          <p>
+            If you believe a child has provided personal information in a way
+            that should be reviewed, please contact LIFORA.
+          </p>
+        </section>
+
+        <section class="policy-block" id="links">
+          <h2>17. External Websites and Third-Party Services</h2>
+
+          <p>
+            The website may contain links to banks, payment providers,
+            cryptocurrency services, social platforms, or other third-party
+            websites.
+          </p>
+
+          <p>
+            LIFORA is not responsible for the privacy practices of those
+            independent services. You should review the relevant provider's
+            privacy information before submitting personal or payment data.
+          </p>
+        </section>
+
+        <section class="policy-block" id="changes">
+          <h2>18. Changes to this Privacy Policy</h2>
+
+          <p>
+            LIFORA may update this Privacy Policy as the website, payment
+            methods, service providers, organizational structure, or legal
+            requirements change.
+          </p>
+
+          <p>
+            The current version will be posted on this page with an updated
+            revision date.
+          </p>
+        </section>
+
+        <section class="policy-block" id="contact">
+          <h2>19. Contact</h2>
+
+          <p>
+            For privacy-related questions or requests, please contact LIFORA
+            using the contact information provided on the website.
+          </p>
+
+          <p>
+            <a class="inline-link" href="/#contact">
+              Contact LIFORA →
+            </a>
+          </p>
+
+          <p>
+            You may also review our
+            <a class="inline-link" href="/donation-terms">Donation Terms</a>,
+            <a class="inline-link" href="/refund-policy">Refund Policy</a>,
+            and
+            <a class="inline-link" href="/how-donations-are-used">
+              How Donations Are Used
+            </a>.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+
+        <div>
+          <h2>
+            Give with clarity and confidence.
+          </h2>
+
+          <p>
+            Review LIFORA's current donation options, terms, and responsible
+            giving information before making a contribution.
+          </p>
+        </div>
+
+        <a href="/donate" class="cta-button">
+          Go to Donate Page →
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">
+            LIFORA<span>.</span>
+          </a>
+
+          <p>
+            Creating hope, empowering lives and building a better world — together.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about">About Us</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/our-impact">Our Impact</a>
+          <a href="/donate">Donate</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="/#volunteer">Volunteer</a>
+          <a href="/#partner">Partner With Us</a>
+          <a href="/#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/donation-terms">Donation Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 LIFORA Foundation. All rights reserved.
+        </div>
+
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development
+          and does not currently represent itself as a registered charity
+          or tax-exempt organization.
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
