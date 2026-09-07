@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Refund Policy | LIFORA Foundation</title>
+
+  <meta
+    name="description"
+    content="Read LIFORA Foundation's refund policy for card payments, bank transfers, cryptocurrency contributions, duplicate payments, unauthorized transactions, and refund requests."
+  >
+
+  <style>
+    :root {
+      --green: #126b55;
+      --green-dark: #0d5141;
+      --green-soft: #e7f4ee;
+      --gold: #e49b32;
+      --text: #16352d;
+      --muted: #65756f;
+      --line: #dce8e3;
+      --bg: #f7fbf9;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(18,107,85,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(18,107,85,.08);
+    }
+
+    .nav-inner {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #173d33;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .donate-nav,
+    .mobile-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 20px;
+      border-radius: 999px;
+
+      background: var(--green);
+      color: #fff !important;
+
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(18,107,85,.16);
+    }
+
+    .donate-nav:hover,
+    .mobile-donate:hover {
+      background: var(--green-dark);
+    }
+
+    .mobile-donate {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 150px 0 78px;
+
+      background:
+        radial-gradient(circle at top right, rgba(228,155,50,.12), transparent 34%),
+        linear-gradient(135deg, #f2faf6 0%, #ffffff 65%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 18px;
+      padding: 8px 14px;
+
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+
+      font-size: clamp(46px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-card {
+      padding: 34px;
+
+      border-radius: 30px;
+      color: #fff;
+
+      background:
+        linear-gradient(
+          145deg,
+          #126b55 0%,
+          #0b4d3e 100%
+        );
+
+      box-shadow:
+        0 30px 70px rgba(18,107,85,.22);
+    }
+
+    .hero-card .symbol {
+      width: 68px;
+      height: 68px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 22px;
+
+      border-radius: 20px;
+      background: rgba(255,255,255,.14);
+
+      font-size: 32px;
+    }
+
+    .hero-card h2 {
+      margin-bottom: 12px;
+      color: #fff;
+      font-size: 29px;
+      line-height: 1.12;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: #e9f5f0;
+      font-size: 15px;
+    }
+
+    /* POLICY CONTENT */
+    .policy-section {
+      padding: 82px 0 30px;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .policy-nav {
+      position: sticky;
+      top: 112px;
+
+      padding: 24px;
+
+      border: 1px solid var(--line);
+      border-radius: 22px;
+
+      background: var(--bg);
+    }
+
+    .policy-nav h3 {
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    .policy-nav a {
+      display: block;
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+      transition: .2s ease;
+    }
+
+    .policy-nav a:hover {
+      color: var(--green);
+      transform: translateX(3px);
+    }
+
+    .policy-content {
+      min-width: 0;
+    }
+
+    .last-updated {
+      display: inline-flex;
+
+      margin-bottom: 26px;
+      padding: 7px 12px;
+
+      border-radius: 999px;
+
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .policy-block {
+      padding-bottom: 34px;
+      margin-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .policy-block:last-child {
+      border-bottom: 0;
+    }
+
+    .policy-block h2 {
+      margin-bottom: 14px;
+
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.16;
+      letter-spacing: -1.2px;
+    }
+
+    .policy-block h3 {
+      margin: 22px 0 8px;
+      font-size: 19px;
+    }
+
+    .policy-block p {
+      margin-bottom: 13px;
+      color: var(--muted);
+    }
+
+    .policy-block ul {
+      margin: 12px 0 14px 22px;
+    }
+
+    .policy-block li {
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+
+    .notice {
+      margin: 20px 0;
+      padding: 22px;
+
+      border: 1px solid #f0dfbd;
+      border-radius: 18px;
+
+      background: #fffaf2;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #78531c;
+    }
+
+    .notice p {
+      margin: 0;
+      color: #786d5c;
+    }
+
+    .green-note {
+      margin: 20px 0;
+      padding: 22px;
+
+      border: 1px solid #d7ebe3;
+      border-radius: 18px;
+
+      background: var(--green-soft);
+    }
+
+    .green-note strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--green);
+    }
+
+    .green-note p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .inline-link {
+      color: var(--green);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 40px 0 20px;
+    }
+
+    .cta-box {
+      padding: 46px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      border-radius: 30px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #126b55 0%,
+          #0c4f40 100%
+        );
+    }
+
+    .cta-box h2 {
+      max-width: 620px;
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.08;
+    }
+
+    .cta-box p {
+      max-width: 650px;
+      color: #e7f3ef;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      min-height: 50px;
+      padding: 13px 22px;
+
+      border-radius: 999px;
+
+      background: #fff;
+      color: var(--green);
+
+      font-weight: 800;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 90px;
+      padding: 60px 0 30px;
+
+      background: #0a3028;
+      color: #ffffff;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+      gap: 55px;
+      margin-bottom: 46px;
+    }
+
+    footer .logo {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #fff;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    footer .logo span {
+      color: var(--gold);
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      color: #b9d4cc;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .footer-col a {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+
+      margin-bottom: 12px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+
+      transition:
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.12);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 30px;
+
+      color: #91aea5;
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-status {
+      max-width: 650px;
+      text-align: right;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-donate {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-grid,
+      .policy-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .policy-nav {
+        position: static;
+      }
+
+      .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        height: 72px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      .mobile-donate {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 112px 0 64px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .policy-section {
+        padding-top: 62px;
+      }
+
+      .hero-card,
+      .policy-nav,
+      .notice,
+      .green-note {
+        padding: 24px;
+      }
+
+      .cta-box {
+        padding: 32px 26px;
+      }
+
+      footer {
+        margin-top: 70px;
+        padding: 48px 0 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-col h4 {
+        margin-bottom: 14px;
+      }
+
+      .footer-col a {
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav-inner">
+
+      <a href="/" class="logo">
+        LIFORA<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/our-impact">Impact</a>
+        <a href="/#contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+
+      <a href="/donate" class="mobile-donate">
+        Donate
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">
+          ↩ REFUND POLICY
+        </div>
+
+        <h1>
+          A clear process for refund requests.
+        </h1>
+
+        <p>
+          This policy explains how LIFORA Foundation handles refund requests
+          involving duplicate payments, payment mistakes, potentially
+          unauthorized transactions, bank transfers, card payments, and
+          cryptocurrency contributions.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="symbol">
+          🧾
+        </div>
+
+        <h2>
+          Contributions are generally final, but mistakes can happen.
+        </h2>
+
+        <p>
+          Certain requests may be reviewed depending on the payment method,
+          timing, circumstances, whether funds remain available, and the rules
+          of the relevant payment provider or financial institution.
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- POLICY -->
+  <main class="policy-section">
+    <div class="container policy-layout">
+
+      <aside class="policy-nav">
+        <h3>On this page</h3>
+        <a href="#overview">1. Overview</a>
+        <a href="#eligible">2. Requests We May Review</a>
+        <a href="#time">3. Request Timing</a>
+        <a href="#card">4. Card Payments</a>
+        <a href="#bank">5. Bank Transfers</a>
+        <a href="#crypto">6. Cryptocurrency</a>
+        <a href="#used-funds">7. Funds Already Used</a>
+        <a href="#fees">8. Fees & Exchange Rates</a>
+        <a href="#unauthorized">9. Unauthorized Payments</a>
+        <a href="#process">10. Review Process</a>
+        <a href="#refusal">11. When a Refund May Be Refused</a>
+        <a href="#status">12. Organizational Status</a>
+        <a href="#changes">13. Changes</a>
+        <a href="#contact">14. Contact</a>
+      </aside>
+
+      <div class="policy-content">
+
+        <div class="last-updated">
+          Last updated: 7 September 2026
+        </div>
+
+        <section class="policy-block" id="overview">
+          <h2>1. Overview</h2>
+
+          <p>
+            Contributions made to LIFORA Foundation are generally intended
+            to be final. However, we recognize that payment mistakes,
+            accidental duplicates, or potentially unauthorized transactions
+            can occur.
+          </p>
+
+          <p>
+            Where appropriate, LIFORA may review a refund request on a
+            case-by-case basis.
+          </p>
+
+          <p>
+            Approval is not automatic and may depend on the payment method,
+            timing of the request, whether the funds remain available,
+            third-party provider rules, and applicable law.
+          </p>
+        </section>
+
+        <section class="policy-block" id="eligible">
+          <h2>2. Refund Requests We May Review</h2>
+
+          <p>
+            LIFORA may review requests involving circumstances such as:
+          </p>
+
+          <ul>
+            <li>an accidental duplicate payment;</li>
+            <li>an incorrect donation amount entered by mistake;</li>
+            <li>a transaction that the account holder believes was unauthorized;</li>
+            <li>a technical or payment-processing error;</li>
+            <li>a payment sent to LIFORA in error; or</li>
+            <li>another exceptional circumstance that reasonably warrants review.</li>
+          </ul>
+
+          <p>
+            A request being eligible for review does not guarantee that a
+            refund will be approved.
+          </p>
+        </section>
+
+        <section class="policy-block" id="time">
+          <h2>3. When to Submit a Refund Request</h2>
+
+          <p>
+            If you believe a payment was made in error, contact LIFORA as soon
+            as reasonably possible after discovering the issue.
+          </p>
+
+          <div class="green-note">
+            <strong>Recommended timing</strong>
+            <p>
+              For the best chance of review before funds are transferred,
+              converted, committed, or used, please contact us promptly after
+              the transaction.
+            </p>
+          </div>
+
+          <p>
+            Delays can reduce the possibility of a refund, particularly for
+            bank transfers, cryptocurrency, currency conversion, or funds that
+            have already been used for humanitarian or operational purposes.
+          </p>
+        </section>
+
+        <section class="policy-block" id="card">
+          <h2>4. Card Payment Refunds</h2>
+
+          <p>
+            Card payments are not currently active on the LIFORA website.
+            If card payments are enabled in the future, they will be handled
+            through an established third-party payment provider.
+          </p>
+
+          <p>
+            Refunds for card transactions may be subject to:
+          </p>
+
+          <ul>
+            <li>the payment provider's refund rules;</li>
+            <li>card-network requirements;</li>
+            <li>fraud or dispute review;</li>
+            <li>processing timelines; and</li>
+            <li>any non-refundable processing charges.</li>
+          </ul>
+
+          <p>
+            A card refund, if approved, would normally be returned through the
+            original payment method where technically and legally possible.
+          </p>
+        </section>
+
+        <section class="policy-block" id="bank">
+          <h2>5. Bank Transfer Refunds</h2>
+
+          <p>
+            International bank transfers can involve sending-bank fees,
+            intermediary-bank fees, receiving-bank fees, currency conversion,
+            and correspondent banking.
+          </p>
+
+          <div class="notice">
+            <strong>Current bank-account disclosure</strong>
+            <p>
+              The receiving account currently displayed on LIFORA's donation
+              page is held in the personal name Muhammad Bilal Qasim while
+              LIFORA completes its organizational development and registration.
+            </p>
+          </div>
+
+          <p>
+            If a bank-transfer refund is approved, the donor may be responsible
+            for bank, intermediary, or transfer fees required to return the funds.
+          </p>
+
+          <p>
+            The amount returned may therefore be lower than the amount
+            originally sent.
+          </p>
+        </section>
+
+        <section class="policy-block" id="crypto">
+          <h2>6. Cryptocurrency Refunds</h2>
+
+          <div class="notice">
+            <strong>Cryptocurrency transactions are generally irreversible.</strong>
+            <p>
+              Blockchain transfers cannot normally be cancelled once confirmed,
+              and sending cryptocurrency to the wrong address or network may
+              result in permanent loss.
+            </p>
+          </div>
+
+          <p>
+            LIFORA cannot guarantee recovery or refund of cryptocurrency sent:
+          </p>
+
+          <ul>
+            <li>to an incorrect wallet address;</li>
+            <li>using the wrong blockchain network;</li>
+            <li>as an unsupported token or asset;</li>
+            <li>without sufficient information to identify the sender; or</li>
+            <li>after the received asset has already been transferred or converted.</li>
+          </ul>
+
+          <p>
+            If a cryptocurrency refund is exceptionally approved, LIFORA may
+            return the same asset or an equivalent amount determined at the
+            time of refund, subject to operational feasibility, compliance
+            checks, network fees, and applicable law.
+          </p>
+
+          <p>
+            Network or transaction fees may be deducted from the amount returned.
+          </p>
+        </section>
+
+        <section class="policy-block" id="used-funds">
+          <h2>7. Funds That Have Already Been Used or Committed</h2>
+
+          <p>
+            A refund may not be possible where the contribution has already
+            been spent, distributed, transferred, committed to a supplier or
+            partner, converted into another currency or asset, or otherwise
+            used for humanitarian or reasonable operational purposes.
+          </p>
+
+          <p>
+            This is one reason donors should contact LIFORA promptly after
+            identifying a payment error.
+          </p>
+        </section>
+
+        <section class="policy-block" id="fees">
+          <h2>8. Processing Fees, Currency Conversion and Exchange Rates</h2>
+
+          <p>
+            Banks, payment providers, card networks, exchanges, blockchain
+            networks, or other intermediaries may charge fees.
+          </p>
+
+          <p>
+            Where a refund is approved, LIFORA does not guarantee that third-party
+            fees, network fees, card-processing charges, bank charges, or currency
+            conversion losses can be recovered.
+          </p>
+
+          <p>
+            If a payment involved currency or cryptocurrency conversion, the
+            value returned may differ from the value originally contributed
+            because of exchange-rate or market movements.
+          </p>
+        </section>
+
+        <section class="policy-block" id="unauthorized">
+          <h2>9. Potentially Unauthorized or Fraudulent Payments</h2>
+
+          <p>
+            If you believe a card, bank account, wallet, or other payment method
+            was used without authorization, contact the relevant bank, card issuer,
+            wallet provider, or payment provider immediately as well as LIFORA.
+          </p>
+
+          <p>
+            LIFORA may request information needed to review the transaction,
+            cooperate with payment providers or financial institutions, and
+            take reasonable fraud-prevention or compliance steps.
+          </p>
+        </section>
+
+        <section class="policy-block" id="process">
+          <h2>10. Refund Review Process</h2>
+
+          <p>
+            To review a request, LIFORA may ask for information such as:
+          </p>
+
+          <ul>
+            <li>your name and contact information;</li>
+            <li>the transaction date;</li>
+            <li>the amount and currency or cryptocurrency asset;</li>
+            <li>the payment method used;</li>
+            <li>a bank reference, payment-provider reference, or transaction hash;</li>
+            <li>the reason for the request; and</li>
+            <li>reasonable evidence supporting the request.</li>
+          </ul>
+
+          <p>
+            We may also need to verify that the person requesting the refund is
+            the person who made or is authorized to act in relation to the payment.
+          </p>
+
+          <p>
+            Requests involving fraud, sanctions, suspicious activity, or
+            compliance concerns may require additional review.
+          </p>
+        </section>
+
+        <section class="policy-block" id="refusal">
+          <h2>11. When a Refund May Be Refused</h2>
+
+          <p>
+            A refund request may be declined where, for example:
+          </p>
+
+          <ul>
+            <li>the payment was knowingly and voluntarily made;</li>
+            <li>the funds have already been used or committed;</li>
+            <li>the transaction cannot technically be reversed;</li>
+            <li>the request cannot be reasonably verified;</li>
+            <li>the request appears fraudulent or abusive;</li>
+            <li>returning funds would violate law, sanctions, or provider rules;</li>
+            <li>the requested refund is inconsistent with the original transaction; or</li>
+            <li>another legitimate reason prevents the refund.</li>
+          </ul>
+        </section>
+
+        <section class="policy-block" id="status">
+          <h2>12. Current Organizational and Tax Status</h2>
+
+          <div class="notice">
+            <strong>Important disclosure</strong>
+            <p>
+              LIFORA Foundation is currently in organizational development and
+              registration and does not currently represent itself as a registered
+              charity, tax-exempt organization, or U.S. 501(c)(3) organization.
+            </p>
+          </div>
+
+          <p>
+            Contributions should not currently be assumed to be tax-deductible.
+          </p>
+
+          <p>
+            A payment confirmation or refund decision does not establish any
+            tax-deductible status.
+          </p>
+        </section>
+
+        <section class="policy-block" id="changes">
+          <h2>13. Changes to this Refund Policy</h2>
+
+          <p>
+            LIFORA may update this Refund Policy as payment methods, providers,
+            legal requirements, or operational practices change.
+          </p>
+
+          <p>
+            The most recent version will be posted on this page with the
+            updated revision date.
+          </p>
+        </section>
+
+        <section class="policy-block" id="contact">
+          <h2>14. Contact Us About a Refund</h2>
+
+          <p>
+            If you need to request review of a payment, contact LIFORA through
+            the contact information provided on the website and include as much
+            transaction information as reasonably possible.
+          </p>
+
+          <p>
+            <a class="inline-link" href="/#contact">
+              Contact LIFORA →
+            </a>
+          </p>
+
+          <p>
+            You should also review our
+            <a class="inline-link" href="/donation-terms">Donation Terms</a>
+            and
+            <a class="inline-link" href="/how-donations-are-used">
+              How Donations Are Used
+            </a>
+            before contributing.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+
+        <div>
+          <h2>
+            Review the terms before making a contribution.
+          </h2>
+
+          <p>
+            LIFORA's donation page explains the current card, bank transfer,
+            and cryptocurrency options available to supporters.
+          </p>
+        </div>
+
+        <a href="/donate" class="cta-button">
+          Go to Donate Page →
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">
+            LIFORA<span>.</span>
+          </a>
+
+          <p>
+            Creating hope, empowering lives and building a better world — together.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about">About Us</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/our-impact">Our Impact</a>
+          <a href="/donate">Donate</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="/#volunteer">Volunteer</a>
+          <a href="/#partner">Partner With Us</a>
+          <a href="/#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/donation-terms">Donation Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 LIFORA Foundation. All rights reserved.
+        </div>
+
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development
+          and does not currently represent itself as a registered charity
+          or tax-exempt organization.
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
