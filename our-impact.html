@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Impact | LIFORA Foundation</title>
+
+  <meta
+    name="description"
+    content="Learn how LIFORA Foundation intends to measure, verify and report humanitarian impact with transparency and responsible evidence."
+  >
+
+  <style>
+    :root {
+      --green: #126b55;
+      --green-dark: #0d5141;
+      --green-soft: #e7f4ee;
+      --gold: #e49b32;
+      --text: #16352d;
+      --muted: #65756f;
+      --line: #dce8e3;
+      --bg: #f7fbf9;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(18,107,85,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(18,107,85,.08);
+    }
+
+    .nav-inner {
+      height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -1px;
+
+      color: #173d33;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      transition: .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--green);
+    }
+
+    .donate-nav,
+    .mobile-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 20px;
+
+      border-radius: 999px;
+
+      background: var(--green);
+      color: #ffffff !important;
+
+      font-weight: 800;
+
+      box-shadow: 0 8px 20px rgba(18,107,85,.16);
+    }
+
+    .donate-nav:hover,
+    .mobile-donate:hover {
+      background: var(--green-dark);
+    }
+
+    .mobile-donate {
+      display: none;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      padding: 150px 0 86px;
+
+      background:
+        radial-gradient(circle at top right, rgba(228,155,50,.12), transparent 34%),
+        linear-gradient(135deg, #f2faf6 0%, #ffffff 65%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 18px;
+
+      padding: 8px 14px;
+
+      border-radius: 999px;
+
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      max-width: 760px;
+
+      font-size: clamp(46px, 7vw, 76px);
+      line-height: .99;
+      letter-spacing: -3px;
+
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 720px;
+
+      color: var(--muted);
+
+      font-size: 18px;
+
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 50px;
+
+      padding: 13px 22px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--green);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--green-dark);
+    }
+
+    .btn-secondary {
+      color: var(--green);
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .hero-card {
+      padding: 34px;
+
+      border-radius: 32px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          145deg,
+          #126b55 0%,
+          #0b4d3e 100%
+        );
+
+      box-shadow:
+        0 30px 70px rgba(18,107,85,.22);
+    }
+
+    .hero-card .symbol {
+      width: 70px;
+      height: 70px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 22px;
+
+      background: rgba(255,255,255,.14);
+
+      font-size: 34px;
+
+      margin-bottom: 24px;
+    }
+
+    .hero-card h2 {
+      color: #fff;
+
+      font-size: 32px;
+      line-height: 1.1;
+
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      color: #e9f5f0;
+
+      font-size: 16px;
+
+      margin: 0;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================== */
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      max-width: 790px;
+
+      margin-bottom: 42px;
+    }
+
+    .section-head.center {
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+    }
+
+    .section-kicker {
+      margin-bottom: 10px;
+
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+
+      font-size: 17px;
+    }
+
+    /* =========================
+       CURRENT IMPACT
+    ========================== */
+
+    .impact-overview {
+      background: var(--bg);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+    .stat-card {
+      padding: 30px;
+
+      border: 1px solid var(--line);
+      border-radius: 24px;
+
+      background: #fff;
+
+      text-align: center;
+    }
+
+    .stat-card strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: var(--green);
+
+      font-size: 46px;
+      line-height: 1;
+    }
+
+    .stat-card span {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .stat-card p {
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       STATUS NOTICE
+    ========================== */
+
+    .status-box {
+      padding: 38px;
+
+      border: 1px solid #f1dfbb;
+      border-radius: 28px;
+
+      background: #fffaf2;
+    }
+
+    .status-label {
+      display: inline-flex;
+
+      margin-bottom: 16px;
+
+      padding: 7px 12px;
+
+      border-radius: 999px;
+
+      background: #fff1d6;
+      color: #8a5a13;
+
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .6px;
+    }
+
+    .status-box h3 {
+      margin-bottom: 12px;
+
+      font-size: 29px;
+    }
+
+    .status-box p {
+      margin-bottom: 13px;
+
+      color: #70675a;
+    }
+
+    .status-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       HOW IMPACT IS MEASURED
+    ========================== */
+
+    .measure-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .measure-card {
+      padding: 28px;
+
+      border: 1px solid var(--line);
+      border-radius: 22px;
+
+      background: #fff;
+
+      transition: .2s ease;
+    }
+
+    .measure-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .measure-icon {
+      margin-bottom: 14px;
+
+      font-size: 29px;
+    }
+
+    .measure-card h3 {
+      margin-bottom: 8px;
+
+      font-size: 20px;
+    }
+
+    .measure-card p {
+      color: var(--muted);
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       EVIDENCE
+    ========================== */
+
+    .evidence {
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #f6faf8 100%
+        );
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .evidence-card {
+      padding: 36px;
+
+      border: 1px solid var(--line);
+      border-radius: 26px;
+
+      background: #fff;
+    }
+
+    .evidence-card.highlight {
+      background: var(--green);
+      border-color: var(--green);
+
+      color: #fff;
+    }
+
+    .evidence-card h3 {
+      margin-bottom: 14px;
+
+      font-size: 28px;
+    }
+
+    .evidence-card.highlight h3 {
+      color: #fff;
+    }
+
+    .evidence-card p {
+      margin-bottom: 12px;
+
+      color: var(--muted);
+    }
+
+    .evidence-card.highlight p {
+      color: #e8f5f0;
+    }
+
+    .check-list {
+      list-style: none;
+
+      margin-top: 16px;
+    }
+
+    .check-list li {
+      position: relative;
+
+      margin: 11px 0;
+
+      padding-left: 28px;
+
+      color: var(--muted);
+    }
+
+    .check-list li::before {
+      content: "✓";
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      color: var(--green);
+
+      font-weight: 900;
+    }
+
+    /* =========================
+       IMPACT JOURNEY
+    ========================== */
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .journey-card {
+      padding: 26px;
+
+      border: 1px solid var(--line);
+      border-radius: 22px;
+
+      background: #fff;
+    }
+
+    .journey-number {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      margin-bottom: 16px;
+
+      border-radius: 50%;
+
+      background: var(--green-soft);
+      color: var(--green);
+
+      font-weight: 900;
+    }
+
+    .journey-card h3 {
+      margin-bottom: 8px;
+
+      font-size: 19px;
+    }
+
+    .journey-card p {
+      color: var(--muted);
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       FUTURE REPORTS
+    ========================== */
+
+    .report-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .report-card {
+      padding: 25px;
+
+      border: 1px solid var(--line);
+      border-radius: 22px;
+
+      background: #fff;
+    }
+
+    .report-card .icon {
+      margin-bottom: 13px;
+
+      font-size: 28px;
+    }
+
+    .report-card h3 {
+      margin-bottom: 7px;
+
+      font-size: 19px;
+    }
+
+    .report-card p {
+      color: var(--muted);
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      padding-top: 30px;
+    }
+
+    .cta-box {
+      padding: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      border-radius: 32px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #126b55 0%,
+          #0c4f40 100%
+        );
+    }
+
+    .cta-box h2 {
+      max-width: 620px;
+
+      margin-bottom: 10px;
+
+      color: #fff;
+
+      font-size: clamp(32px, 4vw, 48px);
+    }
+
+    .cta-box p {
+      max-width: 650px;
+
+      color: #e7f3ef;
+    }
+
+    .cta-box .btn {
+      flex-shrink: 0;
+
+      background: #fff;
+      color: var(--green);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      margin-top: 90px;
+
+      padding: 60px 0 30px;
+
+      background: #0a3028;
+      color: #ffffff;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+
+      gap: 55px;
+
+      margin-bottom: 46px;
+    }
+
+    footer .logo {
+      display: inline-block;
+
+      margin-bottom: 18px;
+
+      color: #ffffff;
+
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    footer .logo span {
+      color: var(--gold);
+    }
+
+    .footer-about p {
+      max-width: 330px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 20px;
+
+      color: #ffffff;
+
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-col a {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+
+      margin-bottom: 12px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+
+      transition:
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+
+      border-top:
+        1px solid rgba(255,255,255,.12);
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 30px;
+
+      color: #91aea5;
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-status {
+      max-width: 650px;
+
+      text-align: right;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-donate {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-grid,
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid,
+      .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .measure-grid,
+      .report-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        height: 72px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      .mobile-donate {
+        padding: 10px 16px;
+
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 112px 0 64px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+
+      .hero-card,
+      .stat-card,
+      .status-box,
+      .measure-card,
+      .evidence-card,
+      .journey-card,
+      .report-card {
+        padding: 26px;
+      }
+
+      .stats-grid,
+      .measure-grid,
+      .journey-grid,
+      .report-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        padding: 32px 26px;
+      }
+
+      footer {
+        margin-top: 70px;
+        padding: 48px 0 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-col h4 {
+        margin-bottom: 14px;
+      }
+
+      .footer-col a {
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav-inner">
+
+      <a href="/" class="logo">
+        LIFORA<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/our-impact" class="active">Impact</a>
+        <a href="/#contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+
+      <a href="/donate" class="mobile-donate">
+        Donate
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          📊 OUR IMPACT
+        </div>
+
+        <h1>
+          Impact should be measured, not invented.
+        </h1>
+
+        <p>
+          LIFORA Foundation intends to report humanitarian impact using
+          clear records, supporting evidence and verified project information.
+          Until activities are completed and documented, we will not publish
+          unsupported impact claims.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#current-impact" class="btn btn-primary">
+            View Current Status →
+          </a>
+
+          <a href="#evidence" class="btn btn-secondary">
+            Our Evidence Standard
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-card">
+
+        <div class="symbol">
+          📈
+        </div>
+
+        <h2>
+          Transparency comes before impressive numbers.
+        </h2>
+
+        <p>
+          As real activities are completed, this page can become a public
+          record of verified humanitarian outcomes, project evidence and
+          responsible use of resources.
+        </p>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- CURRENT IMPACT -->
+  <section
+    class="impact-overview"
+    id="current-impact"
+  >
+
+    <div class="container">
+
+      <div class="section-head center">
+
+        <div class="section-kicker">
+          Current Verified Impact
+        </div>
+
+        <h2>
+          We are starting with honest numbers.
+        </h2>
+
+        <p>
+          LIFORA is currently in its organizational development stage.
+          These figures will only increase when supported by genuine records.
+        </p>
+
+      </div>
+
+      <div class="stats-grid">
+
+        <article class="stat-card">
+          <strong>0+</strong>
+          <span>Lives Reached</span>
+          <p>
+            Verified beneficiary totals will be reported after activities occur.
+          </p>
+        </article>
+
+        <article class="stat-card">
+          <strong>0+</strong>
+          <span>Projects Completed</span>
+          <p>
+            Completed humanitarian activities will be documented here.
+          </p>
+        </article>
+
+        <article class="stat-card">
+          <strong>0</strong>
+          <span>Countries Reported</span>
+          <p>
+            Locations will be added only when supported by real activity records.
+          </p>
+        </article>
+
+        <article class="stat-card">
+          <strong>0+</strong>
+          <span>Verified Reports</span>
+          <p>
+            Project reports will be published as activities are completed.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATUS -->
+  <section>
+
+    <div class="container">
+
+      <div class="section-head">
+
+        <div class="section-kicker">
+          Current Status
+        </div>
+
+        <h2>
+          No fabricated statistics. No unsupported claims.
+        </h2>
+
+      </div>
+
+      <div class="status-box">
+
+        <div class="status-label">
+          CURRENT DEVELOPMENT STAGE
+        </div>
+
+        <h3>
+          LIFORA has not yet published verified humanitarian impact figures.
+        </h3>
+
+        <p>
+          LIFORA Foundation is currently developing its organizational,
+          compliance and operational infrastructure. We are not claiming
+          beneficiary totals, completed projects or country reach that cannot
+          yet be supported by evidence.
+        </p>
+
+        <p>
+          Once genuine humanitarian activities are carried out, this page
+          will be updated with verified information such as project dates,
+          locations, resources used, people supported and supporting records.
+        </p>
+
+        <p>
+          This approach is intended to protect donor trust and ensure that
+          future impact claims can be reasonably verified.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HOW WE MEASURE -->
+  <section class="impact-overview">
+
+    <div class="container">
+
+      <div class="section-head center">
+
+        <div class="section-kicker">
+          How We Intend to Measure Impact
+        </div>
+
+        <h2>
+          More than a number on a homepage.
+        </h2>
+
+      </div>
+
+      <div class="measure-grid">
+
+        <article class="measure-card">
+          <div class="measure-icon">👥</div>
+          <h3>People Supported</h3>
+          <p>
+            Verified or reasonably documented beneficiary counts while
+            protecting privacy and dignity.
+          </p>
+        </article>
+
+        <article class="measure-card">
+          <div class="measure-icon">📦</div>
+          <h3>Resources Delivered</h3>
+          <p>
+            Food, supplies, educational materials, medical support or other
+            resources distributed through an activity.
+          </p>
+        </article>
+
+        <article class="measure-card">
+          <div class="measure-icon">💳</div>
+          <h3>Funds Used</h3>
+          <p>
+            Clear descriptions of major project costs, purchases and
+            operational expenses where appropriate.
+          </p>
+        </article>
+
+        <article class="measure-card">
+          <div class="measure-icon">📍</div>
+          <h3>Locations Reached</h3>
+          <p>
+            Countries, cities or general areas where verified humanitarian
+            activities have taken place.
+          </p>
+        </article>
+
+        <article class="measure-card">
+          <div class="measure-icon">🧾</div>
+          <h3>Supporting Records</h3>
+          <p>
+            Receipts, invoices, procurement records, delivery records or
+            other appropriate documentation.
+          </p>
+        </article>
+
+        <article class="measure-card">
+          <div class="measure-icon">📷</div>
+          <h3>Activity Evidence</h3>
+          <p>
+            Photographs or other evidence where safe, respectful and
+            appropriate consent has been obtained.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EVIDENCE -->
+  <section
+    class="evidence"
+    id="evidence"
+  >
+
+    <div class="container">
+
+      <div class="section-head center">
+
+        <div class="section-kicker">
+          Evidence & Accountability
+        </div>
+
+        <h2>
+          What should support an impact claim.
+        </h2>
+
+      </div>
+
+      <div class="evidence-grid">
+
+        <article class="evidence-card highlight">
+
+          <h3>
+            Evidence should match the claim.
+          </h3>
+
+          <p>
+            If LIFORA reports that an activity happened, we aim to maintain
+            reasonable supporting records showing what was done.
+          </p>
+
+          <p>
+            If we publish a number, that number should be based on records
+            that can be explained rather than estimated for marketing purposes.
+          </p>
+
+        </article>
+
+        <article class="evidence-card">
+
+          <h3>
+            Future impact reports may include:
+          </h3>
+
+          <ul class="check-list">
+            <li>Project name and purpose</li>
+            <li>Activity date or period</li>
+            <li>Country, city or general location</li>
+            <li>Verified or documented beneficiary information</li>
+            <li>Resources purchased or distributed</li>
+            <li>Major expenditure information</li>
+            <li>Receipts or invoices where appropriate</li>
+            <li>Photos or activity evidence where suitable</li>
+            <li>Partner or supplier information where appropriate</li>
+            <li>Project outcome or completion notes</li>
+          </ul>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- IMPACT JOURNEY -->
+  <section>
+
+    <div class="container">
+
+      <div class="section-head center">
+
+        <div class="section-kicker">
+          From Activity to Impact
+        </div>
+
+        <h2>
+          A simple reporting journey.
+        </h2>
+
+      </div>
+
+      <div class="journey-grid">
+
+        <article class="journey-card">
+          <div class="journey-number">1</div>
+          <h3>Plan</h3>
+          <p>
+            Define the humanitarian need, intended response, expected costs
+            and records required.
+          </p>
+        </article>
+
+        <article class="journey-card">
+          <div class="journey-number">2</div>
+          <h3>Deliver</h3>
+          <p>
+            Carry out the activity directly or with suitable partners while
+            maintaining appropriate records.
+          </p>
+        </article>
+
+        <article class="journey-card">
+          <div class="journey-number">3</div>
+          <h3>Verify</h3>
+          <p>
+            Review activity details, beneficiary information, expenses and
+            supporting evidence.
+          </p>
+        </article>
+
+        <article class="journey-card">
+          <div class="journey-number">4</div>
+          <h3>Report</h3>
+          <p>
+            Publish a meaningful summary so supporters can understand
+            what was done and what was achieved.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FUTURE REPORTS -->
+  <section class="impact-overview">
+
+    <div class="container">
+
+      <div class="section-head center">
+
+        <div class="section-kicker">
+          Future Impact Reports
+        </div>
+
+        <h2>
+          What you will be able to see here.
+        </h2>
+
+      </div>
+
+      <div class="report-grid">
+
+        <article class="report-card">
+          <div class="icon">📄</div>
+          <h3>Project Summaries</h3>
+          <p>
+            Clear descriptions of each completed humanitarian activity.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">🌍</div>
+          <h3>Country & Location</h3>
+          <p>
+            General geographic information about where assistance was delivered.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">👥</div>
+          <h3>Verified Reach</h3>
+          <p>
+            Reasonably documented information about people or communities supported.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">💰</div>
+          <h3>Resource Use</h3>
+          <p>
+            Major expenses, purchases or resources used to carry out the activity.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">🧾</div>
+          <h3>Supporting Documentation</h3>
+          <p>
+            Relevant records that help support the project summary where appropriate.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">📸</div>
+          <h3>Project Evidence</h3>
+          <p>
+            Respectful visual documentation where privacy, dignity and safety allow.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <div>
+
+          <h2>
+            Help us build impact that can be documented responsibly.
+          </h2>
+
+          <p>
+            Explore LIFORA's current contribution options and review how
+            donations may be used before giving.
+          </p>
+
+        </div>
+
+        <a
+          href="/donate"
+          class="btn"
+        >
+          Donate Now →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+
+          <a href="/" class="logo">
+            LIFORA<span>.</span>
+          </a>
+
+          <p>
+            Creating hope, empowering lives and building a better world — together.
+          </p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="/about">
+            About Us
+          </a>
+
+          <a href="/our-work">
+            Our Work
+          </a>
+
+          <a href="/our-impact">
+            Our Impact
+          </a>
+
+          <a href="/donate">
+            Donate
+          </a>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>
+            Get Involved
+          </h4>
+
+          <a href="/#volunteer">
+            Volunteer
+          </a>
+
+          <a href="/#partner">
+            Partner With Us
+          </a>
+
+          <a href="/#contact">
+            Contact
+          </a>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>
+            Trust &amp; Legal
+          </h4>
+
+          <a href="/how-donations-are-used">
+            How Donations Are Used
+          </a>
+
+          <a href="/donation-terms">
+            Donation Terms
+          </a>
+
+          <a href="/refund-policy">
+            Refund Policy
+          </a>
+
+          <a href="/privacy-policy">
+            Privacy Policy
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 LIFORA Foundation. All rights reserved.
+        </div>
+
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development
+          and does not currently represent itself as a registered charity
+          or tax-exempt organization.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
