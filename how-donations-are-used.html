@@ -35,7 +35,17 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
       color: var(--text);
       background: var(--white);
       line-height: 1.65;
@@ -436,58 +446,111 @@
     /* FOOTER */
     footer {
       margin-top: 90px;
-      padding: 56px 0 28px;
-      color: #d8ebe5;
-      background: #0a2f27;
+      padding: 60px 0 30px;
+
+      background: #0a3028;
+      color: #ffffff;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 50px;
-      margin-bottom: 40px;
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+
+      gap: 55px;
+
+      margin-bottom: 46px;
     }
 
     footer .logo {
-      color: #fff;
       display: inline-block;
-      margin-bottom: 14px;
+
+      margin-bottom: 18px;
+
+      color: #ffffff;
+
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    footer .logo span {
+      color: var(--gold);
     }
 
     .footer-about p {
-      max-width: 480px;
-      color: #b9d1ca;
+      max-width: 330px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      line-height: 1.7;
     }
 
     .footer-col h4 {
-      color: #fff;
-      margin-bottom: 14px;
+      margin-bottom: 20px;
+
+      color: #ffffff;
+
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
     }
 
     .footer-col a {
       display: block;
-      width: max-content;
+      width: fit-content;
       max-width: 100%;
-      color: #b9d1ca;
-      margin: 8px 0;
+
+      margin-bottom: 12px;
+
+      color: #b9d4cc;
+
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
     }
 
     .footer-col a:hover {
-      color: #fff;
+      color: #ffffff;
+      transform: translateX(3px);
     }
 
     .footer-bottom {
-      padding-top: 22px;
-      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 25px;
+
+      border-top: 1px solid rgba(255,255,255,0.12);
+
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      color: #9fb9b1;
+      align-items: flex-start;
+
+      gap: 30px;
+
+      color: #91aea5;
+
       font-size: 13px;
+      line-height: 1.6;
     }
 
     .footer-status {
-      max-width: 760px;
+      max-width: 650px;
+      text-align: right;
     }
 
     @media (max-width: 900px) {
@@ -523,6 +586,11 @@
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-status {
+        text-align: left;
       }
     }
 
@@ -572,13 +640,31 @@
         padding: 32px 26px;
       }
 
+      footer {
+        margin-top: 70px;
+        padding: 48px 0 25px;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 32px;
+      }
+
+      .footer-col h4 {
+        margin-bottom: 14px;
+      }
+
+      .footer-col a {
+        margin-bottom: 10px;
       }
 
       .footer-bottom {
         flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
       }
     }
   </style>
@@ -589,17 +675,24 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="container nav-inner">
-      <a href="/" class="logo">LIFORA<span>.</span></a>
+
+      <a href="/" class="logo">
+        LIFORA<span>.</span>
+      </a>
 
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/our-work">Our Work</a>
-        <a href="/how-donations-are-used" class="active">How Donations Are Used</a>
+        <a href="/our-impact">Impact</a>
+        <a href="/#contact">Contact</a>
         <a href="/donate" class="donate-nav">Donate</a>
       </div>
 
-      <a href="/donate" class="mobile-donate">Donate</a>
+      <a href="/donate" class="mobile-donate">
+        Donate
+      </a>
+
     </div>
   </nav>
 
@@ -864,39 +957,58 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
+
       <div class="footer-grid">
+
         <div class="footer-about">
-          <a href="/" class="logo">LIFORA<span>.</span></a>
+          <a href="/" class="logo">
+            LIFORA<span>.</span>
+          </a>
+
           <p>
-            Building a humanitarian platform focused on dignity, hope,
-            opportunity and responsible support for people in need.
+            Creating hope, empowering lives and building a better world — together.
           </p>
         </div>
 
         <div class="footer-col">
           <h4>Explore</h4>
-          <a href="/">Home</a>
           <a href="/about">About Us</a>
-          <a href="/our-work">Our Work & Transparency</a>
-          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/our-impact">Our Impact</a>
           <a href="/donate">Donate</a>
         </div>
 
         <div class="footer-col">
-          <h4>Information</h4>
-          <a href="/about#status">Organizational Status</a>
+          <h4>Get Involved</h4>
+          <a href="/#volunteer">Volunteer</a>
+          <a href="/#partner">Partner With Us</a>
+          <a href="/#contact">Contact</a>
         </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/donation-terms">Donation Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 LIFORA Foundation. All rights reserved.</div>
+
+        <div>
+          © 2026 LIFORA Foundation. All rights reserved.
+        </div>
 
         <div class="footer-status">
           LIFORA Foundation is currently in organizational development
           and does not currently represent itself as a registered charity
           or tax-exempt organization.
         </div>
+
       </div>
+
     </div>
   </footer>
 
