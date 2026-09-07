@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Work & Transparency | LIFORA Foundation</title>
+  <meta
+    name="description"
+    content="Learn about LIFORA Foundation's humanitarian focus areas, transparency approach, project reporting standards, and current activity status."
+  >
+
+  <style>
+    :root {
+      --green: #126b55;
+      --green-dark: #0d5141;
+      --green-soft: #e7f4ee;
+      --gold: #e49b32;
+      --text: #16352d;
+      --muted: #65756f;
+      --line: #dce8e3;
+      --bg: #f7fbf9;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(18, 107, 85, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(18,107,85,.08);
+    }
+
+    .nav-inner {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #173d33;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      transition: .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--green);
+    }
+
+    .donate-nav,
+    .mobile-donate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      color: #fff !important;
+      background: var(--green);
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(18,107,85,.16);
+    }
+
+    .donate-nav:hover,
+    .mobile-donate:hover {
+      background: var(--green-dark);
+    }
+
+    .mobile-donate {
+      display: none;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 150px 0 86px;
+      background:
+        radial-gradient(circle at top right, rgba(228,155,50,.12), transparent 34%),
+        linear-gradient(135deg, #f2faf6 0%, #ffffff 65%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .8px;
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 76px);
+      line-height: .99;
+      letter-spacing: -3px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--green);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--green-dark);
+    }
+
+    .btn-secondary {
+      color: var(--green);
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .hero-card {
+      padding: 34px;
+      border-radius: 32px;
+      color: #fff;
+      background: linear-gradient(145deg, #126b55 0%, #0b4d3e 100%);
+      box-shadow: 0 30px 70px rgba(18,107,85,.22);
+    }
+
+    .hero-card .symbol {
+      width: 70px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: rgba(255,255,255,.14);
+      font-size: 34px;
+      margin-bottom: 24px;
+    }
+
+    .hero-card h2 {
+      color: #fff;
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      color: #e9f5f0;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 42px;
+    }
+
+    .section-head.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -1.8px;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* FOCUS AREAS */
+    .focus-section {
+      background: var(--bg);
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .focus-card {
+      padding: 30px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: #fff;
+      transition: .2s ease;
+    }
+
+    .focus-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .focus-icon {
+      font-size: 31px;
+      margin-bottom: 14px;
+    }
+
+    .focus-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .focus-card p {
+      color: var(--muted);
+    }
+
+    /* HOW WE WORK */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      padding: 26px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--green);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .process-card h3 {
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* TRANSPARENCY */
+    .transparency {
+      background: linear-gradient(180deg, #ffffff 0%, #f6faf8 100%);
+    }
+
+    .transparency-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .transparency-card {
+      padding: 36px;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .transparency-card.highlight {
+      color: #fff;
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .transparency-card h3 {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .transparency-card.highlight h3 {
+      color: #fff;
+    }
+
+    .transparency-card p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .transparency-card.highlight p {
+      color: #e8f5f0;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 28px;
+      margin: 11px 0;
+      color: var(--muted);
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    /* ACTIVITY STATUS */
+    .status-box {
+      padding: 38px;
+      border-radius: 28px;
+      border: 1px solid #f1dfbb;
+      background: #fffaf2;
+    }
+
+    .status-label {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #fff1d6;
+      color: #8a5a13;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .6px;
+      margin-bottom: 16px;
+    }
+
+    .status-box h3 {
+      font-size: 29px;
+      margin-bottom: 12px;
+    }
+
+    .status-box p {
+      color: #70675a;
+      margin-bottom: 13px;
+    }
+
+    .status-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* REPORTING TEMPLATE */
+    .reporting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .report-card {
+      padding: 25px;
+      border-radius: 22px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .report-card .icon {
+      font-size: 28px;
+      margin-bottom: 13px;
+    }
+
+    .report-card h3 {
+      font-size: 19px;
+      margin-bottom: 7px;
+    }
+
+    .report-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* CTA */
+    .cta {
+      padding-top: 30px;
+    }
+
+    .cta-box {
+      padding: 48px;
+      border-radius: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      color: #fff;
+      background: linear-gradient(135deg, #126b55 0%, #0c4f40 100%);
+    }
+
+    .cta-box h2 {
+      color: #fff;
+      max-width: 620px;
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      color: #e7f3ef;
+      max-width: 650px;
+    }
+
+    .cta-box .btn {
+      flex-shrink: 0;
+      background: #fff;
+      color: var(--green);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 90px;
+      padding: 60px 0 30px;
+      background: #0a3028;
+      color: #ffffff;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+      gap: 55px;
+      margin-bottom: 46px;
+    }
+
+    footer .logo {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    footer .logo span {
+      color: var(--gold);
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      color: #b9d4cc;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-col a {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      margin-bottom: 12px;
+      color: #b9d4cc;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      color: #91aea5;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-status {
+      max-width: 650px;
+      text-align: right;
+    }
+
+
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-donate {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-grid,
+      .transparency-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .reporting-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav-inner {
+        height: 72px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      .mobile-donate {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 112px 0 64px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+
+      .hero-card,
+      .focus-card,
+      .process-card,
+      .transparency-card,
+      .status-box,
+      .report-card {
+        padding: 26px;
+      }
+
+      .process-grid,
+      .reporting-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        padding: 32px 26px;
+      }
+
+      footer {
+        margin-top: 70px;
+        padding: 48px 0 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-col h4 {
+        margin-bottom: 14px;
+      }
+
+      .footer-col a {
+        margin-bottom: 10px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">LIFORA<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/our-work" class="active">Our Work</a>
+        <a href="/#impact">Impact</a>
+        <a href="/#contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+
+      <a href="/donate" class="mobile-donate">Donate</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">🤝 OUR WORK & TRANSPARENCY</div>
+
+        <h1>
+          Compassion should be matched by accountability.
+        </h1>
+
+        <p>
+          LIFORA Foundation is developing humanitarian programs focused on
+          essential relief, education, healthcare and emergency assistance.
+          As activities are carried out, we intend to publish clear and
+          verifiable information about what was done and how support was used.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#focus" class="btn btn-primary">Explore Our Focus →</a>
+          <a href="#transparency" class="btn btn-secondary">Our Transparency Approach</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="symbol">📋</div>
+        <h2>Clear records. Responsible action.</h2>
+        <p>
+          LIFORA aims to document humanitarian activities with project details,
+          supporting records and updates where appropriate and practical.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- FOCUS AREAS -->
+  <section class="focus-section" id="focus">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-kicker">Our Focus Areas</div>
+        <h2>Four areas of humanitarian support.</h2>
+        <p>
+          These are the areas LIFORA intends to prioritize as its programs
+          and operational capacity are developed.
+        </p>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-card">
+          <div class="focus-icon">🍲</div>
+          <h3>Food & Essential Relief</h3>
+          <p>
+            Supporting access to food, clean water and essential household
+            supplies for people and families facing hardship.
+          </p>
+        </article>
+
+        <article class="focus-card">
+          <div class="focus-icon">📚</div>
+          <h3>Education & Opportunity</h3>
+          <p>
+            Supporting school supplies, learning materials and educational
+            opportunities for children and young people.
+          </p>
+        </article>
+
+        <article class="focus-card">
+          <div class="focus-icon">🏥</div>
+          <h3>Health & Medical Support</h3>
+          <p>
+            Supporting access to essential medicines, medical assistance
+            and healthcare-related needs where practical and appropriate.
+          </p>
+        </article>
+
+        <article class="focus-card">
+          <div class="focus-icon">🆘</div>
+          <h3>Emergency & Disaster Relief</h3>
+          <p>
+            Supporting urgent humanitarian response through food, essential
+            supplies, shelter-related assistance and other emergency needs.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section>
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-kicker">How We Intend to Work</div>
+        <h2>A simple framework for responsible humanitarian activity.</h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card">
+          <div class="step-number">1</div>
+          <h3>Identify a Need</h3>
+          <p>
+            Understand the humanitarian need, location, intended beneficiaries
+            and practical requirements before committing resources.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="step-number">2</div>
+          <h3>Plan the Response</h3>
+          <p>
+            Define the purpose, expected costs, delivery method and records
+            needed to support responsible implementation.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="step-number">3</div>
+          <h3>Carry Out the Activity</h3>
+          <p>
+            Deliver assistance directly or through suitable partners while
+            maintaining appropriate documentation.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <div class="step-number">4</div>
+          <h3>Report & Review</h3>
+          <p>
+            Publish meaningful updates and review supporting records so
+            supporters can understand how activities were carried out.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARENCY -->
+  <section class="transparency" id="transparency">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-kicker">Transparency</div>
+        <h2>What we intend to publish for completed activities.</h2>
+        <p>
+          The exact records available may differ by project, location,
+          safety considerations and privacy requirements.
+        </p>
+      </div>
+
+      <div class="transparency-grid">
+        <article class="transparency-card highlight">
+          <h3>Transparency is part of the work.</h3>
+
+          <p>
+            Humanitarian organizations should be able to explain what they did,
+            why they did it and how resources were used.
+          </p>
+
+          <p>
+            LIFORA intends to build its reporting processes around clear,
+            understandable and verifiable information.
+          </p>
+        </article>
+
+        <article class="transparency-card">
+          <h3>Project records may include:</h3>
+
+          <ul class="check-list">
+            <li>Project or activity name</li>
+            <li>Country, city or general location</li>
+            <li>Date or activity period</li>
+            <li>Purpose and type of assistance</li>
+            <li>Amounts spent or resources distributed</li>
+            <li>Beneficiary information in a privacy-respecting form</li>
+            <li>Receipts, invoices or procurement records where appropriate</li>
+            <li>Photographs or activity evidence where consent and safety allow</li>
+            <li>Partner or supplier information where appropriate</li>
+            <li>Completion notes and lessons learned</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT ACTIVITY STATUS -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Current Activity Status</div>
+        <h2>We will not publish impact claims before they can be supported.</h2>
+      </div>
+
+      <div class="status-box">
+        <div class="status-label">CURRENT DEVELOPMENT STAGE</div>
+
+        <h3>Verified project reports will be added as activities are carried out.</h3>
+
+        <p>
+          LIFORA Foundation is currently developing its organizational,
+          compliance and operational infrastructure. We are not publishing
+          fabricated beneficiary totals, project counts or impact figures.
+        </p>
+
+        <p>
+          As genuine humanitarian activities are completed, this page can be
+          expanded with project summaries, supporting evidence and relevant
+          financial or distribution information.
+        </p>
+
+        <p>
+          Any future statistics shown by LIFORA should be based on records
+          that can be reasonably verified.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTING STANDARD -->
+  <section class="focus-section">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-kicker">Future Project Reporting</div>
+        <h2>What a LIFORA project update can show.</h2>
+      </div>
+
+      <div class="reporting-grid">
+        <article class="report-card">
+          <div class="icon">📍</div>
+          <h3>Where & When</h3>
+          <p>
+            The general project location, activity date and relevant
+            humanitarian context.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">🎯</div>
+          <h3>Purpose</h3>
+          <p>
+            What the activity was intended to achieve and the type of
+            support provided.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">💳</div>
+          <h3>Use of Funds</h3>
+          <p>
+            A clear description of major costs, purchases or resources used
+            for the activity.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">👥</div>
+          <h3>People Supported</h3>
+          <p>
+            Appropriate beneficiary information or verified counts while
+            protecting privacy and dignity.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">🧾</div>
+          <h3>Supporting Records</h3>
+          <p>
+            Receipts, invoices, delivery records or other supporting
+            documentation where available and appropriate.
+          </p>
+        </article>
+
+        <article class="report-card">
+          <div class="icon">📷</div>
+          <h3>Activity Evidence</h3>
+          <p>
+            Photographs or other evidence where safe, respectful and
+            permission has been obtained when needed.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>Support the humanitarian areas that matter to you.</h2>
+          <p>
+            LIFORA's donation page provides current contribution options
+            and important information for responsible giving.
+          </p>
+        </div>
+
+        <a href="/donate" class="btn">Donate Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">LIFORA<span>.</span></a>
+          <p>
+            Creating hope, empowering lives and building a better world — together.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about">About Us</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/#impact">Our Impact</a>
+          <a href="/donate">Donate</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="/#volunteer">Volunteer</a>
+          <a href="/#partner">Partner With Us</a>
+          <a href="/#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/donation-terms">Donation Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 LIFORA Foundation. All rights reserved.</div>
+
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development
+          and does not currently represent itself as a registered charity
+          or tax-exempt organization.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
