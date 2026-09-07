@@ -3,86 +3,1484 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | LIFORA Foundation</title>
-  <meta name="description" content="Learn about LIFORA Foundation, our humanitarian mission, focus areas, principles, and current organizational status.">
+  <meta name="description" content="LIFORA Foundation — Creating hope, empowering lives, and building a better world.">
+  <title>LIFORA Foundation | Hope Without Borders</title>
+
   <style>
-    :root{--green:#126b55;--green-dark:#0d5141;--green-soft:#e7f4ee;--gold:#e49b32;--text:#16352d;--muted:#65756f;--line:#dce8e3;--bg:#f7fbf9;--white:#fff;--shadow:0 20px 50px rgba(18,107,85,.10)}
-    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.65} a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 40px));margin:0 auto}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(18,107,85,.08)}.nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-size:28px;font-weight:900;letter-spacing:-1px;color:#173d33}.logo span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700}.nav-links a:hover,.nav-links .active{color:var(--green)}.donate-nav,.mobile-donate{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;color:#fff!important;background:var(--green);font-weight:800;box-shadow:0 8px 20px rgba(18,107,85,.16)}.donate-nav:hover,.mobile-donate:hover{background:var(--green-dark)}.mobile-donate{display:none}
-    .hero{padding:150px 0 86px;background:radial-gradient(circle at top right,rgba(228,155,50,.12),transparent 32%),linear-gradient(135deg,#f2faf6 0%,#fff 65%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:8px 14px;border-radius:999px;background:var(--green-soft);color:var(--green);font-size:12px;font-weight:900;letter-spacing:.8px}h1{max-width:760px;font-size:clamp(46px,7vw,78px);line-height:.98;letter-spacing:-3px;margin-bottom:24px}.hero p{max-width:720px;color:var(--muted);font-size:18px;margin-bottom:28px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 22px;border-radius:999px;font-weight:800;transition:.2s}.btn-primary{color:#fff;background:var(--green)}.btn-primary:hover{transform:translateY(-2px);background:var(--green-dark)}.btn-secondary{background:#fff;color:var(--green);border:1px solid var(--line)}.hero-card{padding:34px;border-radius:32px;color:#fff;background:linear-gradient(145deg,#126b55 0%,#0b4d3e 100%);box-shadow:0 30px 70px rgba(18,107,85,.22)}.hero-card .symbol{width:70px;height:70px;display:grid;place-items:center;border-radius:22px;background:rgba(255,255,255,.14);font-size:34px;margin-bottom:24px}.hero-card h2{color:#fff;font-size:32px;line-height:1.1;margin-bottom:12px}.hero-card p{color:#e9f5f0;font-size:16px;margin:0}
-    section{padding:92px 0}.section-head{max-width:760px;margin-bottom:42px}.section-head.center{margin-left:auto;margin-right:auto;text-align:center}.section-kicker{color:var(--green);font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}h2{font-size:clamp(34px,5vw,52px);line-height:1.08;letter-spacing:-1.8px;margin-bottom:14px}.section-head p{color:var(--muted);font-size:17px}
-    .story-grid,.mission-grid,.focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.story-grid{gap:40px}.story-card,.mission-card,.focus-card,.principle{padding:30px;border:1px solid var(--line);border-radius:24px;background:#fff}.story-card{padding:34px;box-shadow:var(--shadow)}.story-card h3,.mission-card h3{font-size:25px;margin-bottom:12px}.story-card p,.mission-card p,.focus-card p,.principle p{color:var(--muted)}.mission{background:var(--bg)}.mission-card{padding:36px}.mission-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:16px;background:var(--green-soft);font-size:25px;margin-bottom:18px}.focus-card{transition:.2s}.focus-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.focus-icon{font-size:30px;margin-bottom:14px}.focus-card h3{font-size:22px;margin-bottom:8px}
-    .principles{background:linear-gradient(180deg,#fff 0%,#f6faf8 100%)}.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.principle{padding:28px;border-radius:22px}.principle strong{display:block;font-size:19px;margin-bottom:8px}.principle p{font-size:15px}
-    .status-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:stretch}.status-title{padding:36px;border-radius:26px;color:#fff;background:var(--green)}.status-title .status-icon{font-size:34px;margin-bottom:20px}.status-title h2{color:#fff;font-size:36px;margin-bottom:12px}.status-title p{color:#e8f5f0}.status-note{padding:36px;border-radius:26px;background:#fffaf2;border:1px solid #f3dfbd}.status-note h3{font-size:24px;margin-bottom:12px}.status-note p{color:#6e6559;margin-bottom:14px}.status-note p:last-child{margin-bottom:0}
-    .cta{padding-top:30px}.cta-box{padding:48px;border-radius:32px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff;background:linear-gradient(135deg,#126b55 0%,#0c4f40 100%)}.cta-box h2{color:#fff;max-width:620px;font-size:clamp(32px,4vw,48px);margin-bottom:10px}.cta-box p{color:#e7f3ef;max-width:650px}.cta-box .btn{flex-shrink:0;background:#fff;color:var(--green)}
-    footer{margin-top:90px;padding:56px 0 28px;color:#d8ebe5;background:#0a2f27}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;margin-bottom:40px}footer .logo{color:#fff;display:inline-block;margin-bottom:14px}.footer-about p{max-width:480px;color:#b9d1ca}.footer-col h4{color:#fff;margin-bottom:14px}.footer-col a{display:block;width:max-content;max-width:100%;color:#b9d1ca;margin:8px 0}.footer-col a:hover{color:#fff}.footer-bottom{padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;color:#9fb9b1;font-size:13px}.footer-status{max-width:760px}
-    @media(max-width:850px){.nav-links{display:none}.mobile-donate{display:inline-flex}.hero{padding-top:125px}.hero-grid,.story-grid,.mission-grid,.status-wrap{grid-template-columns:1fr}.hero-grid{gap:36px}.focus-grid,.principles-grid{grid-template-columns:1fr}.cta-box{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:560px){.container{width:min(100% - 28px,1120px)}.nav-inner{height:72px}.logo{font-size:23px}.mobile-donate{padding:10px 16px;font-size:13px}.hero{padding:112px 0 64px}h1{letter-spacing:-2px}section{padding:68px 0}.hero-card,.story-card,.mission-card,.focus-card,.principle,.status-title,.status-note{padding:26px}.cta-box{padding:32px 26px}.footer-grid{grid-template-columns: 1.5fr 1fr 1fr 1fr;}.footer-bottom{flex-direction:column}}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #18352f;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e8eeeb;
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #126b55;
+    }
+
+    .logo span {
+      color: #e49b32;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #126b55;
+    }
+
+    .donate-nav {
+      background: #126b55;
+      color: white !important;
+      padding: 12px 21px;
+      border-radius: 30px;
+    }
+
+    .donate-nav:hover {
+      background: #0d5141;
+    }
+
+    .mobile-top-donate {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: #126b55;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1;
+      box-shadow: 0 8px 20px rgba(18,107,85,.16);
+      transition: .2s;
+    }
+
+    .mobile-top-donate:hover {
+      background: #0d5141;
+      color: #ffffff;
+    }
+
+    /* HUMANITARIAN BANNER CAROUSEL */
+    .banner-section {
+      padding: 110px 0 35px;
+      background: linear-gradient(180deg, #f6fbf8 0%, #ffffff 100%);
+    }
+
+    .banner-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 26px;
+    }
+
+    .banner-heading .mini-title {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: #e4f4ed;
+      color: #126b55;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .8px;
+    }
+
+    .banner-heading h2 {
+      margin-bottom: 8px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+    }
+
+    .banner-heading p {
+      color: #667873;
+      font-size: 16px;
+    }
+
+    .humanity-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      min-height: 355px;
+      background: #0e5e4b;
+      box-shadow: 0 24px 60px rgba(18,107,85,.16);
+    }
+
+    .slides-track {
+      display: flex;
+      width: 100%;
+      transition: transform .6s cubic-bezier(.22,.61,.36,1);
+    }
+
+    .humanity-slide {
+      min-width: 100%;
+      min-height: 355px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      isolation: isolate;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .humanity-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,49,40,.92) 0%,
+          rgba(10,49,40,.78) 42%,
+          rgba(10,49,40,.26) 72%,
+          rgba(10,49,40,.12) 100%
+        );
+    }
+
+    .slide-content {
+      width: min(610px, 72%);
+      padding: 54px 70px;
+      color: #ffffff;
+    }
+
+    .slide-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.20);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .slide-content h3 {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+      margin-bottom: 14px;
+    }
+
+    .slide-content p {
+      max-width: 560px;
+      color: #eef7f3;
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    .slide-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .slide-donate,
+    .slide-more {
+      border: 0;
+      border-radius: 30px;
+      padding: 13px 21px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .slide-donate {
+      display: inline-block;
+      background: #ffffff;
+      color: #126b55;
+    }
+
+    .slide-donate:hover {
+      transform: translateY(-2px);
+    }
+
+    .slide-more {
+      background: rgba(255,255,255,.14);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,.34);
+    }
+
+    .slide-more:hover {
+      background: rgba(255,255,255,.22);
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      width: 48px;
+      height: 48px;
+      margin-top: -24px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,.94);
+      color: #126b55;
+      font-size: 26px;
+      font-weight: 900;
+      box-shadow: 0 8px 24px rgba(0,0,0,.14);
+      transition: .2s;
+    }
+
+    .slider-arrow:hover {
+      transform: scale(1.06);
+      background: #ffffff;
+    }
+
+    .slider-prev { left: 18px; }
+    .slider-next { right: 18px; }
+
+    .slider-dots {
+      position: absolute;
+      z-index: 6;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,.50);
+      transition: .2s;
+      padding: 0;
+    }
+
+    .slider-dot.active {
+      width: 28px;
+      border-radius: 999px;
+      background: #ffffff;
+    }
+
+    .slide-food {
+      background-image:
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-education {
+      background-image:
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-health {
+      background-image:
+        url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-emergency {
+      background-image:
+        url("https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    .slide-together {
+      background-image:
+        url("https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1800&q=88");
+    }
+
+    /* POPUP */
+    .cause-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(8,32,27,.66);
+      backdrop-filter: blur(7px);
+    }
+
+    .cause-modal.open { display: flex; }
+
+    .modal-card {
+      width: min(560px, 100%);
+      position: relative;
+      padding: 34px;
+      border-radius: 26px;
+      background: #ffffff;
+      box-shadow: 0 28px 90px rgba(0,0,0,.22);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 50%;
+      background: #eef7f3;
+      color: #126b55;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .modal-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      background: #e4f4ed;
+      font-size: 27px;
+    }
+
+    .modal-card h3 {
+      margin: 0 45px 10px 0;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .modal-card p {
+      color: #62756f;
+      margin-bottom: 24px;
+    }
+
+    .modal-donate {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 30px;
+      background: #126b55;
+      color: white;
+      font-weight: 800;
+    }
+
+    .modal-donate:hover { background: #0d5141; }
+
+    /* HERO */
+    .hero {
+      padding: 90px 0 100px;
+      background:
+        radial-gradient(circle at 85% 20%, #dff3e9 0, transparent 30%),
+        linear-gradient(135deg, #f4fbf7, #ffffff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #126b55;
+      background: #e4f4ed;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(46px, 6vw, 78px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #126b55;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #5a6c67;
+      max-width: 590px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .btn-primary {
+      background: #126b55;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #0d5141;
+    }
+
+    .btn-secondary {
+      border: 1px solid #cbdad4;
+      background: white;
+    }
+
+    .btn-secondary:hover {
+      border-color: #126b55;
+      color: #126b55;
+    }
+
+    /* HERO ART */
+    .hero-card {
+      min-height: 430px;
+      border-radius: 35px;
+      background: linear-gradient(145deg, #126b55, #1d9273);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 25px 70px rgba(18,107,85,.18);
+    }
+
+    .hero-circle {
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 105px;
+    }
+
+    .floating {
+      position: absolute;
+      background: white;
+      padding: 17px 20px;
+      border-radius: 17px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+      font-weight: 800;
+      color: #18352f;
+    }
+
+    .float-one {
+      top: 35px;
+      left: 30px;
+    }
+
+    .float-two {
+      bottom: 35px;
+      right: 30px;
+    }
+
+    /* STATS */
+    .stats {
+      padding: 35px 0;
+      border-bottom: 1px solid #e8eeeb;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+
+    .stat {
+      padding: 10px;
+      border-right: 1px solid #e5ece9;
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 34px;
+      color: #126b55;
+    }
+
+    .stat span {
+      color: #71817c;
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
+
+    .section-heading h2 {
+      font-size: 43px;
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: #687a75;
+      font-size: 17px;
+    }
+
+    /* PROGRAMS */
+    .programs {
+      background: #f7faf8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      padding: 32px;
+      background: white;
+      border-radius: 24px;
+      border: 1px solid #e7eeeb;
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(18,107,85,.10);
+    }
+
+    .icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 17px;
+      background: #e4f4ed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 22px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #6c7d78;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-box {
+      min-height: 400px;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #e4f4ed, #f8eee0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+    }
+
+    .about-content h2 {
+      font-size: 43px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: #657771;
+      margin-bottom: 18px;
+    }
+
+    .check {
+      margin-top: 18px;
+      font-weight: 700;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 85px 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #126b55, #1e9072);
+      color: white;
+      border-radius: 32px;
+      padding: 65px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: 45px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .cta-box p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #e5f5ef;
+      font-size: 17px;
+    }
+
+    .cta-box .btn {
+      background: white;
+      color: #126b55;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a3028;
+      color: #ffffff;
+      padding: 64px 0 30px;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 0.9fr 0.95fr 1.2fr;
+      gap: 48px;
+      padding-bottom: 46px;
+    }
+
+    .footer-about .logo {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    .footer-about .logo span {
+      color: #e49b32;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      color: #b9d4cc;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 20px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #b9d4cc;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #91aea5;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-status {
+      max-width: 650px;
+      text-align: right;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-top-donate {
+        display: inline-flex;
+      }
+
+      .banner-section {
+        padding-top: 105px;
+      }
+
+      .humanity-slider,
+      .humanity-slide {
+        min-height: 430px;
+      }
+
+      .slide-content {
+        width: 100%;
+        padding: 48px 58px 62px;
+      }
+
+      .humanity-slide::before {
+        background:
+          linear-gradient(
+            90deg,
+            rgba(10,49,40,.92) 0%,
+            rgba(10,49,40,.78) 62%,
+            rgba(10,49,40,.50) 100%
+          );
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      .hero-card {
+        min-height: 330px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 0;
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 38px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+
+      .cta-box {
+        padding: 45px 25px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+
+      .nav-inner {
+        height: 70px;
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+
+      .mobile-top-donate {
+        min-height: 40px;
+        padding: 9px 15px;
+        font-size: 13px;
+      }
+
+      .banner-section {
+        padding-top: 98px;
+      }
+
+      .banner-heading {
+        margin-bottom: 18px;
+      }
+
+      .humanity-slider,
+      .humanity-slide {
+        min-height: 470px;
+      }
+
+      .slide-content {
+        padding: 48px 30px 70px;
+      }
+
+      .slide-content h3 {
+        font-size: 36px;
+      }
+
+      .slide-content p {
+        font-size: 15px;
+      }
+
+      .slide-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .slide-donate,
+      .slide-more {
+        width: 100%;
+        text-align: center;
+      }
+
+      .slider-arrow {
+        width: 42px;
+        height: 42px;
+        margin-top: -21px;
+        font-size: 22px;
+      }
+
+      .slider-prev { left: 8px; }
+      .slider-next { right: 8px; }
+
+      .modal-card {
+        padding: 28px 22px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .section-heading h2,
+      .about-content h2 {
+        font-size: 34px;
+      }
+
+      .cta-box h2 {
+        font-size: 34px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <nav class="nav"><div class="container nav-inner"><a href="/" class="logo">LIFORA<span>.</span></a><div class="nav-links"><a href="/">Home</a><a href="/about" class="active">About</a><a href="/#work">Our Work</a><a href="/#contact">Contact</a><a href="/donate" class="donate-nav">Donate</a></div><a href="/donate" class="mobile-donate">Donate</a></div></nav>
 
-  <header class="hero"><div class="container hero-grid"><div><div class="eyebrow">🌍 ABOUT LIFORA FOUNDATION</div><h1>Humanity without borders.</h1><p>LIFORA Foundation is being built around a simple belief: every person deserves dignity, opportunity, hope and the chance to build a better future.</p><div class="hero-actions"><a href="/donate" class="btn btn-primary">Support Our Mission →</a><a href="#our-story" class="btn btn-secondary">Learn Our Story</a></div></div><div class="hero-card"><div class="symbol">🤝</div><h2>Compassion should lead to meaningful action.</h2><p>Our goal is to develop responsible humanitarian programs focused on essential relief, education, health support and emergency assistance.</p></div></div></header>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo">LIFORA<span>.</span></a>
 
-  <section id="our-story"><div class="container"><div class="section-head"><div class="section-kicker">Our Story</div><h2>Built around dignity, hope and opportunity.</h2><p>LIFORA was created with the intention of bringing people together to support individuals and communities facing hardship.</p></div><div class="story-grid"><article class="story-card"><h3>Why LIFORA exists</h3><p>Around the world, people can face hunger, limited access to education, medical difficulties and sudden emergencies. LIFORA aims to create a responsible platform through which supporters can contribute toward humanitarian initiatives designed to address those needs.</p></article><article class="story-card"><h3>What we are building</h3><p>We are developing the organizational, governance, compliance and operational foundations needed to carry out humanitarian activities responsibly. As programs are launched, LIFORA intends to publish clear updates and supporting information about its activities.</p></article></div></div></section>
+      <a
+        href="/donate"
+        class="mobile-top-donate"
+        aria-label="Donate to LIFORA Foundation"
+      >
+        Donate
+      </a>
 
-  <section class="mission"><div class="container"><div class="section-head center"><div class="section-kicker">Mission & Vision</div><h2>Helping people move from hardship toward possibility.</h2></div><div class="mission-grid"><article class="mission-card"><div class="mission-icon">🎯</div><h3>Our Mission</h3><p>To support vulnerable people and communities through responsible humanitarian initiatives focused on essential needs, education, health and emergency relief.</p></article><article class="mission-card"><div class="mission-icon">🌱</div><h3>Our Vision</h3><p>A world in which more people have the support, resources and opportunities they need to live with dignity, hope and possibility.</p></article></div></div></section>
+      <div class="nav-links">
+        <a href="/about">About</a>
+        <a href="/our-work">Our Work</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+    </div>
+  </nav>
 
-  <section id="focus"><div class="container"><div class="section-head center"><div class="section-kicker">What We Focus On</div><h2>Humanitarian support where it can matter most.</h2><p>LIFORA is developing programs around four core areas of humanitarian need.</p></div><div class="focus-grid"><article class="focus-card"><div class="focus-icon">🍲</div><h3>Food & Essential Relief</h3><p>Supporting access to food, clean water and essential supplies for people and families facing difficult circumstances.</p></article><article class="focus-card"><div class="focus-icon">📚</div><h3>Education & Opportunity</h3><p>Helping expand access to learning resources, school supplies and educational opportunities for children and young people.</p></article><article class="focus-card"><div class="focus-icon">🏥</div><h3>Health & Medical Support</h3><p>Supporting access to essential medical assistance, medicines and healthcare-related needs where practical and appropriate.</p></article><article class="focus-card"><div class="focus-icon">🆘</div><h3>Emergency & Disaster Relief</h3><p>Supporting humanitarian response during emergencies with essential supplies, food and other urgent assistance.</p></article></div></div></section>
 
-  <section class="principles"><div class="container"><div class="section-head center"><div class="section-kicker">Our Principles</div><h2>Trust must be earned through responsible action.</h2></div><div class="principles-grid"><article class="principle"><strong>Human Dignity</strong><p>People receiving support should be treated with respect, compassion and dignity.</p></article><article class="principle"><strong>Responsible Giving</strong><p>Contributions should be handled carefully and used for legitimate humanitarian and operational purposes.</p></article><article class="principle"><strong>Transparency</strong><p>As activities are carried out, LIFORA intends to publish meaningful updates and supporting information where appropriate.</p></article><article class="principle"><strong>Accountability</strong><p>Clear processes, documentation and internal controls are important parts of responsible humanitarian work.</p></article><article class="principle"><strong>Non-Discrimination</strong><p>Humanitarian assistance should be guided by need and delivered without unfair discrimination.</p></article><article class="principle"><strong>Long-Term Responsibility</strong><p>We aim to build systems that can support sustainable, compliant and effective humanitarian activity over time.</p></article></div></div></section>
+  <!-- HUMANITARIAN BANNER CAROUSEL -->
+  <section class="banner-section" aria-label="Humanitarian causes">
+    <div class="container">
 
-  <section id="status"><div class="container status-wrap"><div class="status-title"><div class="status-icon">🛡️</div><h2>Current Organizational Status</h2><p>We believe visitors and supporters should clearly understand LIFORA's current stage of development.</p></div><div class="status-note"><h3>LIFORA is currently being developed and organized.</h3><p>LIFORA Foundation is currently in the organizational development and registration stage. We are building the governance, compliance and operational framework needed to support humanitarian initiatives responsibly.</p><p>LIFORA does not currently represent itself as a registered charity, tax-exempt organization, or U.S. 501(c)(3) organization.</p><p>Unless and until an applicable tax-exempt status is formally obtained, contributions should not be assumed to be tax-deductible.</p></div></div></section>
-
-  <section class="cta"><div class="container"><div class="cta-box"><div><h2>Your kindness can become someone's hope.</h2><p>Explore LIFORA's donation options and support the humanitarian areas that matter to you.</p></div><a href="/donate" class="btn">Donate Now →</a></div></div></section>
-
- <footer>
-  <div class="container">
-    <div class="footer-grid">
-
-      <div class="footer-about">
-        <a href="/" class="logo">LIFORA<span>.</span></a>
+      <div class="banner-heading">
+        <div class="mini-title">HUMANITY IN ACTION</div>
+        <h2>See how compassion can become hope.</h2>
         <p>
-          Creating hope, empowering lives and building a better world — together.
+          Explore the areas LIFORA Foundation aims to support.
+          You can donate directly from any banner.
         </p>
       </div>
 
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <a href="/about">About Us</a>
-        <a href="/our-work">Our Work</a>
-        <a href="/#impact">Our Impact</a>
-        <a href="/donate">Donate</a>
-      </div>
+      <div class="humanity-slider" id="humanitySlider">
 
-      <div class="footer-col">
-        <h4>Get Involved</h4>
-        <a href="/#volunteer">Volunteer</a>
-        <a href="/#partner">Partner With Us</a>
-        <a href="/#contact">Contact</a>
-      </div>
+        <div class="slides-track" id="slidesTrack">
 
-      <div class="footer-col">
-        <h4>Trust &amp; Legal</h4>
-        <a href="/how-donations-are-used">How Donations Are Used</a>
-        <a href="/donation-terms">Donation Terms</a>
-        <a href="/refund-policy">Refund Policy</a>
-        <a href="/privacy-policy">Privacy Policy</a>
+          <article class="humanity-slide slide-food">
+            <div class="slide-content">
+              <div class="slide-kicker">🍲 Food Relief</div>
+              <h3>No one should face hunger alone.</h3>
+              <p>
+                Help provide food and essential supplies to vulnerable
+                individuals and families facing difficult circumstances.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Donate for Food →</a>
+                <button type="button" class="slide-more"
+                  data-icon="🍲"
+                  data-title="Food & Essential Relief"
+                  data-text="LIFORA aims to support vulnerable families and communities with food, essential supplies and basic necessities during times of hardship.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-education">
+            <div class="slide-content">
+              <div class="slide-kicker">📚 Education</div>
+              <h3>Education can open a lifetime of opportunity.</h3>
+              <p>
+                Support children and young people with learning resources,
+                school supplies and access to educational opportunities.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Support Education →</a>
+                <button type="button" class="slide-more"
+                  data-icon="📚"
+                  data-title="Education & Opportunity"
+                  data-text="LIFORA aims to help children and young people access education, school supplies, learning opportunities and a brighter future.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-health">
+            <div class="slide-content">
+              <div class="slide-kicker">🏥 Health Support</div>
+              <h3>Health support can protect dignity and hope.</h3>
+              <p>
+                Help vulnerable people access essential healthcare,
+                medicines and medical assistance when support is needed.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Support Healthcare →</a>
+                <button type="button" class="slide-more"
+                  data-icon="🏥"
+                  data-title="Health & Medical Support"
+                  data-text="LIFORA aims to help vulnerable people access essential healthcare, medicines and medical support when assistance is needed.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-emergency">
+            <div class="slide-content">
+              <div class="slide-kicker">🆘 Emergency Relief</div>
+              <h3>When crisis strikes, timely help matters.</h3>
+              <p>
+                Support humanitarian response with food, essential supplies,
+                shelter assistance and urgent relief during emergencies.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Support Relief →</a>
+                <button type="button" class="slide-more"
+                  data-icon="🆘"
+                  data-title="Emergency & Disaster Relief"
+                  data-text="LIFORA aims to respond to emergencies and disasters with food, essential supplies, shelter assistance and humanitarian support.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="humanity-slide slide-together">
+            <div class="slide-content">
+              <div class="slide-kicker">🤝 Together</div>
+              <h3>A kinder world is possible when people help people.</h3>
+              <p>
+                Every act of generosity can help create dignity,
+                opportunity and hope for someone facing hardship.
+              </p>
+              <div class="slide-actions">
+                <a href="/donate" class="slide-donate">Donate Now →</a>
+                <button type="button" class="slide-more"
+                  data-icon="❤️"
+                  data-title="Hope Without Borders"
+                  data-text="LIFORA Foundation exists to bring people together around one simple belief: everyone deserves the chance to build a better future.">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <button type="button" class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous banner">‹</button>
+        <button type="button" class="slider-arrow slider-next" id="sliderNext" aria-label="Next banner">›</button>
+
+        <div class="slider-dots" id="sliderDots" aria-label="Banner navigation"></div>
+
       </div>
 
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <div>© 2026 LIFORA Foundation. All rights reserved.</div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
 
-      <div class="footer-status">
-        LIFORA Foundation is currently in organizational development
-        and does not currently represent itself as a registered charity
-        or tax-exempt organization.
+      <div>
+        <div class="eyebrow">🌍 HOPE WITHOUT BORDERS</div>
+
+        <h1>
+          Together, we can<br>
+          <span>change lives.</span>
+        </h1>
+
+        <p>
+          LIFORA Foundation is building a world where every person
+          has the opportunity to live with dignity, hope and possibility.
+        </p>
+
+        <div class="buttons">
+          <a href="/donate" class="btn btn-primary">Make a Difference →</a>
+          <a href="/about" class="btn btn-secondary">Learn About Us</a>
+        </div>
       </div>
+
+      <div class="hero-card">
+        <div class="hero-circle">🤝</div>
+        <div class="floating float-one">❤️ Give Hope</div>
+        <div class="floating float-two">🌱 Build Futures</div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats" id="impact">
+    <div class="container stats-grid">
+
+      <div class="stat">
+        <strong>0+</strong>
+        <span>Lives Reached</span>
+      </div>
+
+      <div class="stat">
+        <strong>0+</strong>
+        <span>Projects</span>
+      </div>
+
+      <div class="stat">
+        <strong>0+</strong>
+        <span>Volunteers</span>
+      </div>
+
+      <div class="stat">
+        <strong>0</strong>
+        <span>Countries</span>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">OUR HUMANITARIAN WORK</div>
+
+      <h2>Helping people where support matters most.</h2>
+
+      <p>
+        LIFORA Foundation aims to support vulnerable individuals,
+        families and communities through practical humanitarian action.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <!-- FOOD -->
+      <div class="card">
+        <div class="icon">🍲</div>
+        <h3>Food & Essential Relief</h3>
+        <p>
+          Supporting vulnerable families and communities with food,
+          essential supplies and basic necessities during times of hardship.
+        </p>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Education & Opportunity</h3>
+        <p>
+          Helping children and young people access education,
+          school supplies, learning opportunities and a brighter future.
+        </p>
+      </div>
+
+      <!-- HEALTH -->
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>Health & Medical Support</h3>
+        <p>
+          Helping vulnerable people access essential healthcare,
+          medicines and medical support when assistance is needed.
+        </p>
+      </div>
+
+      <!-- EMERGENCY -->
+      <div class="card">
+        <div class="icon">🆘</div>
+        <h3>Emergency & Disaster Relief</h3>
+        <p>
+          Responding to emergencies and disasters with food,
+          essential supplies, shelter assistance and humanitarian support.
+        </p>
+      </div>
+
     </div>
   </div>
-</footer>
+</section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+
+      <div class="about-box">
+        🌍
+      </div>
+
+      <div class="about-content">
+        <div class="eyebrow">ABOUT LIFORA</div>
+
+        <h2>Small acts can create extraordinary change.</h2>
+
+        <p>
+          LIFORA Foundation exists to bring people together around
+          one simple belief: everyone deserves the chance to build
+          a better future.
+        </p>
+
+        <p>
+          Through compassion, community action and responsible
+          giving, we aim to support people facing difficult
+          circumstances and create meaningful opportunities.
+        </p>
+
+        <div class="check">✓ Compassion first</div>
+        <div class="check">✓ Transparent action</div>
+        <div class="check">✓ Sustainable impact</div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DONATION CTA -->
+  <section class="cta" id="donate">
+    <div class="container">
+
+      <div class="cta-box">
+        <h2>Your kindness can become someone's hope.</h2>
+
+        <p>
+          Every contribution matters. Together, we can turn generosity
+          into real opportunities and lasting change.
+        </p>
+
+        <a href="/donate" class="btn">Donate to LIFORA →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">LIFORA<span>.</span></a>
+          <p>
+            Creating hope, empowering lives and building a better world — together.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="/about">About Us</a>
+            <a href="/our-work">Our Work</a>
+            <a href="/#impact">Our Impact</a>
+            <a href="/donate">Donate</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <div class="footer-links">
+            <a href="/#contact">Volunteer</a>
+            <a href="/#contact">Partner With Us</a>
+            <a href="/#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <div class="footer-links">
+            <a href="/how-donations-are-used">How Donations Are Used</a>
+            <a href="/donation-terms">Donation Terms</a>
+            <a href="/refund-policy">Refund Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 LIFORA Foundation. All rights reserved.</div>
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development and does not currently
+          represent itself as a registered charity or tax-exempt organization.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- HUMANITARIAN POPUP -->
+  <div class="cause-modal" id="causeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+
+      <button type="button" class="modal-close" id="modalClose" aria-label="Close popup">×</button>
+
+      <div class="modal-icon" id="modalIcon">❤️</div>
+
+      <h3 id="modalTitle">Help create hope</h3>
+
+      <p id="modalText">
+        Your support can help turn compassion into meaningful humanitarian action.
+      </p>
+
+      <a href="/donate" class="modal-donate">
+        Go to Donate Page →
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const slider = document.getElementById("humanitySlider");
+      const track = document.getElementById("slidesTrack");
+      const slides = Array.from(document.querySelectorAll(".humanity-slide"));
+      const prevButton = document.getElementById("sliderPrev");
+      const nextButton = document.getElementById("sliderNext");
+      const dotsBox = document.getElementById("sliderDots");
+
+      let currentSlide = 0;
+      let autoTimer = null;
+      let touchStartX = 0;
+
+      function renderDots() {
+        dotsBox.innerHTML = "";
+
+        slides.forEach(function (_, index) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "slider-dot" + (index === currentSlide ? " active" : "");
+          dot.setAttribute("aria-label", "Go to banner " + (index + 1));
+
+          dot.addEventListener("click", function () {
+            goToSlide(index);
+            restartAuto();
+          });
+
+          dotsBox.appendChild(dot);
+        });
+      }
+
+      function goToSlide(index) {
+        currentSlide = (index + slides.length) % slides.length;
+        track.style.transform = "translateX(-" + (currentSlide * 100) + "%)";
+        renderDots();
+      }
+
+      function nextSlide() {
+        goToSlide(currentSlide + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(currentSlide - 1);
+      }
+
+      function startAuto() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        stopAuto();
+
+        autoTimer = setInterval(function () {
+          nextSlide();
+        }, 5500);
+      }
+
+      function stopAuto() {
+        if (autoTimer) {
+          clearInterval(autoTimer);
+          autoTimer = null;
+        }
+      }
+
+      function restartAuto() {
+        stopAuto();
+        startAuto();
+      }
+
+      prevButton.addEventListener("click", function () {
+        prevSlide();
+        restartAuto();
+      });
+
+      nextButton.addEventListener("click", function () {
+        nextSlide();
+        restartAuto();
+      });
+
+      slider.addEventListener("mouseenter", stopAuto);
+      slider.addEventListener("mouseleave", startAuto);
+
+      slider.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+      }, { passive: true });
+
+      slider.addEventListener("touchend", function (event) {
+        const touchEndX = event.changedTouches[0].screenX;
+        const difference = touchStartX - touchEndX;
+
+        if (Math.abs(difference) > 45) {
+          if (difference > 0) nextSlide();
+          else prevSlide();
+
+          restartAuto();
+        }
+      }, { passive: true });
+
+      const modal = document.getElementById("causeModal");
+      const modalClose = document.getElementById("modalClose");
+      const modalIcon = document.getElementById("modalIcon");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalText = document.getElementById("modalText");
+
+      function openModal(button) {
+        modalIcon.textContent = button.dataset.icon || "❤️";
+        modalTitle.textContent = button.dataset.title || "Help create hope";
+        modalText.textContent = button.dataset.text || "";
+        modal.classList.add("open");
+        document.body.style.overflow = "hidden";
+        stopAuto();
+      }
+
+      function closeModal() {
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+        startAuto();
+      }
+
+      document.querySelectorAll(".slide-more").forEach(function (button) {
+        button.addEventListener("click", function () {
+          openModal(button);
+        });
+      });
+
+      modalClose.addEventListener("click", closeModal);
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) closeModal();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("open")) {
+          closeModal();
+        }
+      });
+
+      renderDots();
+      startAuto();
+    });
+  </script>
+
 </body>
 </html>
