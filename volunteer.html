@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | LIFORA Foundation</title>
+  <meta name="description" content="Volunteer opportunities with LIFORA Foundation are coming soon.">
+
+  <style>
+    :root{
+      --green:#126b55;
+      --green-dark:#0d5141;
+      --green-soft:#e7f4ee;
+      --gold:#e49b32;
+      --text:#16352d;
+      --muted:#65756f;
+      --line:#dce8e3;
+      --bg:#f7fbf9;
+      --white:#ffffff;
+      --shadow:0 20px 50px rgba(18,107,85,.10);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,calc(100% - 40px));margin:0 auto}
+
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(18,107,85,.08);
+    }
+    .nav-inner{
+      height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px;
+    }
+    .logo{
+      font-size:28px;font-weight:900;letter-spacing:-1px;color:#173d33;
+    }
+    .logo span{color:var(--gold)}
+    .nav-links{
+      display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700;
+    }
+    .nav-links a:hover{color:var(--green)}
+    .donate-nav,.mobile-donate{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 20px;border-radius:999px;background:var(--green);color:#fff!important;
+      font-weight:800;box-shadow:0 8px 20px rgba(18,107,85,.16);
+    }
+    .donate-nav:hover,.mobile-donate:hover{background:var(--green-dark)}
+    .mobile-donate{display:none}
+
+    .hero{
+      min-height:78vh;
+      padding:150px 0 90px;
+      display:flex;
+      align-items:center;
+      background:
+        radial-gradient(circle at top right,rgba(228,155,50,.12),transparent 34%),
+        linear-gradient(135deg,#f2faf6 0%,#ffffff 65%);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:64px;
+      align-items:center;
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      margin-bottom:18px;padding:8px 14px;border-radius:999px;
+      background:var(--green-soft);color:var(--green);
+      font-size:12px;font-weight:900;letter-spacing:.8px;
+    }
+    h1{
+      font-size:clamp(46px,7vw,76px);
+      line-height:.99;letter-spacing:-3px;margin-bottom:22px;
+    }
+    .hero p{
+      max-width:720px;color:var(--muted);font-size:18px;margin-bottom:28px;
+    }
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:50px;padding:13px 22px;border-radius:999px;
+      font-weight:800;transition:.2s ease;
+    }
+    .btn-primary{background:var(--green);color:#fff}
+    .btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+    .btn-secondary{background:#fff;color:var(--green);border:1px solid var(--line)}
+    .hero-card{
+      padding:38px;border-radius:32px;color:#fff;
+      background:linear-gradient(145deg,#126b55 0%,#0b4d3e 100%);
+      box-shadow:0 30px 70px rgba(18,107,85,.22);
+      text-align:center;
+    }
+    .hero-card .symbol{
+      width:78px;height:78px;display:grid;place-items:center;
+      margin:0 auto 22px;border-radius:24px;background:rgba(255,255,255,.14);
+      font-size:38px;
+    }
+    .hero-card h2{
+      color:#fff;font-size:32px;line-height:1.1;margin-bottom:12px;
+    }
+    .hero-card p{
+      color:#e9f5f0;font-size:16px;margin:0;
+    }
+    .coming-badge{
+      display:inline-flex;
+      margin-top:22px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.14);
+      color:#fff;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.6px;
+    }
+
+    footer{
+      margin-top:0;padding:60px 0 30px;background:#0a3028;color:#fff;
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.5fr 1fr 1fr 1.15fr;gap:55px;margin-bottom:46px;
+    }
+    footer .logo{
+      display:inline-block;margin-bottom:18px;color:#fff;font-size:28px;font-weight:900;letter-spacing:-.5px;
+    }
+    footer .logo span{color:var(--gold)}
+    .footer-about p{
+      max-width:330px;color:#b9d4cc;font-size:15px;line-height:1.7;
+    }
+    .footer-col h4{
+      margin-bottom:20px;color:#fff;font-size:15px;font-weight:800;letter-spacing:.2px;
+    }
+    .footer-col a{
+      display:block;width:fit-content;max-width:100%;margin-bottom:12px;
+      color:#b9d4cc;font-size:15px;font-weight:500;line-height:1.45;
+      transition:color .2s ease,transform .2s ease;
+    }
+    .footer-col a:hover{color:#fff;transform:translateX(3px)}
+    .footer-bottom{
+      padding-top:25px;border-top:1px solid rgba(255,255,255,.12);
+      display:flex;justify-content:space-between;align-items:flex-start;gap:30px;
+      color:#91aea5;font-size:13px;line-height:1.6;
+    }
+    .footer-status{max-width:650px;text-align:right}
+
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .mobile-donate{display:inline-flex}
+      .hero{padding-top:125px}
+      .hero-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+      .footer-status{text-align:left}
+    }
+
+    @media(max-width:560px){
+      .container{width:min(100% - 28px,1120px)}
+      .nav-inner{height:72px}
+      .logo{font-size:23px}
+      .mobile-donate{padding:10px 16px;font-size:13px}
+      .hero{min-height:auto;padding:112px 0 64px}
+      h1{letter-spacing:-2px}
+      .hero-card{padding:28px 24px}
+      footer{padding:48px 0 25px}
+      .footer-grid{grid-template-columns:1fr;gap:32px}
+      .footer-col h4{margin-bottom:14px}
+      .footer-col a{margin-bottom:10px}
+      .footer-bottom{flex-direction:column;gap:14px}
+      .footer-status{text-align:left}
+    }
+  </style>
+
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">LIFORA<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/our-impact">Impact</a>
+        <a href="/#contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+
+      <a href="/donate" class="mobile-donate">Donate</a>
+    </div>
+  </nav>
+
+
+  <header class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <div class="eyebrow">🙋 VOLUNTEER</div>
+
+        <h1>Volunteer opportunities are coming soon.</h1>
+
+        <p>We are preparing a responsible volunteer program with clear roles, safeguarding expectations, and practical ways for people to contribute their time and skills. Applications are not open yet.</p>
+
+        <div class="hero-actions">
+          <a href="/" class="btn btn-primary">Back to Home →</a>
+          <a href="/donate" class="btn btn-secondary">Support LIFORA</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="symbol">💚</div>
+        <h2>We are building this carefully.</h2>
+        <p>When volunteer opportunities become available, this page will explain who can apply, available roles, expectations, and how to get involved.</p>
+        <div class="coming-badge">COMING SOON</div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">LIFORA<span>.</span></a>
+          <p>Creating hope, empowering lives and building a better world — together.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about">About Us</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/our-impact">Our Impact</a>
+          <a href="/donate">Donate</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="/volunteer">Volunteer</a>
+          <a href="/partner-with-us">Partner With Us</a>
+          <a href="/#contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/donation-terms">Donation Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 LIFORA Foundation. All rights reserved.</div>
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development
+          and does not currently represent itself as a registered charity
+          or tax-exempt organization.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
