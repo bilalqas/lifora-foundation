@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | LIFORA Foundation</title>
+  <meta name="description" content="Contact LIFORA Foundation for general enquiries or donation-related questions.">
+
+  <style>
+    :root{
+      --green:#126b55;
+      --green-dark:#0d5141;
+      --green-soft:#e7f4ee;
+      --gold:#e49b32;
+      --text:#16352d;
+      --muted:#65756f;
+      --line:#dce8e3;
+      --bg:#f7fbf9;
+      --white:#ffffff;
+      --shadow:0 20px 50px rgba(18,107,85,.10);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:var(--white);
+      line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,calc(100% - 40px));margin:0 auto}
+
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(18,107,85,.08);
+    }
+    .nav-inner{
+      height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px
+    }
+    .logo{
+      font-size:28px;font-weight:900;letter-spacing:-1px;color:#173d33
+    }
+    .logo span{color:var(--gold)}
+    .nav-links{
+      display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700
+    }
+    .nav-links a:hover,.nav-links .active{color:var(--green)}
+    .donate-nav,.mobile-donate{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 20px;border-radius:999px;color:#fff!important;
+      background:var(--green);font-weight:800;
+      box-shadow:0 8px 20px rgba(18,107,85,.16)
+    }
+    .donate-nav:hover,.mobile-donate:hover{background:var(--green-dark)}
+    .mobile-donate{display:none}
+
+    .hero{
+      padding:150px 0 86px;
+      background:
+        radial-gradient(circle at top right,rgba(228,155,50,.12),transparent 34%),
+        linear-gradient(135deg,#f2faf6 0%,#fff 65%);
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:center
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;
+      padding:8px 14px;border-radius:999px;background:var(--green-soft);
+      color:var(--green);font-size:12px;font-weight:900;letter-spacing:.8px
+    }
+    h1{
+      max-width:760px;margin-bottom:22px;
+      font-size:clamp(46px,7vw,76px);line-height:.99;letter-spacing:-3px
+    }
+    .hero p{max-width:720px;color:var(--muted);font-size:18px}
+    .hero-card{
+      padding:34px;border-radius:32px;color:#fff;
+      background:linear-gradient(145deg,#126b55 0%,#0b4d3e 100%);
+      box-shadow:0 30px 70px rgba(18,107,85,.22)
+    }
+    .hero-card .symbol{
+      width:70px;height:70px;display:grid;place-items:center;
+      margin-bottom:24px;border-radius:22px;background:rgba(255,255,255,.14);
+      font-size:34px
+    }
+    .hero-card h2{margin-bottom:12px;color:#fff;font-size:32px;line-height:1.1}
+    .hero-card p{margin:0;color:#e9f5f0;font-size:16px}
+
+    .contact-section{padding:92px 0;background:var(--bg)}
+    .section-head{max-width:760px;margin:0 auto 42px;text-align:center}
+    .section-kicker{
+      margin-bottom:10px;color:var(--green);font-size:12px;font-weight:900;
+      letter-spacing:1px;text-transform:uppercase
+    }
+    .section-head h2{
+      margin-bottom:14px;font-size:clamp(34px,5vw,52px);
+      line-height:1.08;letter-spacing:-1.8px
+    }
+    .section-head p{color:var(--muted);font-size:17px}
+    .contact-grid{
+      display:grid;grid-template-columns:repeat(2,1fr);
+      gap:24px;max-width:920px;margin:0 auto
+    }
+    .contact-card{
+      padding:34px;border:1px solid var(--line);border-radius:26px;
+      background:#fff;box-shadow:var(--shadow)
+    }
+    .contact-icon{
+      width:60px;height:60px;display:grid;place-items:center;
+      margin-bottom:20px;border-radius:18px;background:var(--green-soft);
+      font-size:28px
+    }
+    .contact-card h3{margin-bottom:10px;font-size:25px}
+    .contact-card p{margin-bottom:20px;color:var(--muted)}
+    .email-box{
+      margin-bottom:18px;padding:15px 17px;border:1px solid var(--line);
+      border-radius:14px;background:var(--bg);color:var(--green);
+      font-weight:800;word-break:break-word
+    }
+    .email-button{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:48px;padding:12px 20px;border-radius:999px;
+      background:var(--green);color:#fff;font-weight:800;transition:.2s ease
+    }
+    .email-button:hover{transform:translateY(-2px);background:var(--green-dark)}
+
+    .info-section{padding:92px 0}
+    .info-grid{
+      display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch
+    }
+    .info-card{
+      padding:36px;border:1px solid var(--line);border-radius:26px;background:#fff
+    }
+    .info-card.highlight{color:#fff;background:var(--green);border-color:var(--green)}
+    .info-card h3{margin-bottom:14px;font-size:27px}
+    .info-card.highlight h3{color:#fff}
+    .info-card p{margin-bottom:12px;color:var(--muted)}
+    .info-card.highlight p{color:#e8f5f0}
+    .info-card p:last-child{margin-bottom:0}
+    .notice{
+      padding:22px;border:1px solid #f0dfbd;border-radius:18px;background:#fffaf2
+    }
+    .notice strong{display:block;margin-bottom:7px;color:#78531c}
+    .notice p{color:#786d5c}
+
+    .cta{padding:30px 0 20px}
+    .cta-box{
+      padding:48px;display:flex;align-items:center;justify-content:space-between;
+      gap:30px;border-radius:32px;color:#fff;
+      background:linear-gradient(135deg,#126b55 0%,#0c4f40 100%)
+    }
+    .cta-box h2{
+      max-width:620px;margin-bottom:10px;color:#fff;
+      font-size:clamp(32px,4vw,48px);line-height:1.08
+    }
+    .cta-box p{max-width:650px;color:#e7f3ef}
+    .cta-button{
+      display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+      min-height:50px;padding:13px 22px;border-radius:999px;
+      background:#fff;color:var(--green);font-weight:800
+    }
+
+    footer{
+      margin-top:90px;padding:60px 0 30px;background:#0a3028;color:#fff
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.5fr 1fr 1fr 1.15fr;
+      gap:55px;margin-bottom:46px
+    }
+    footer .logo{
+      display:inline-block;margin-bottom:18px;color:#fff;
+      font-size:28px;font-weight:900;letter-spacing:-.5px
+    }
+    footer .logo span{color:var(--gold)}
+    .footer-about p{max-width:330px;color:#b9d4cc;font-size:15px;line-height:1.7}
+    .footer-col h4{margin-bottom:20px;color:#fff;font-size:15px;font-weight:800}
+    .footer-col a{
+      display:block;width:fit-content;max-width:100%;margin-bottom:12px;
+      color:#b9d4cc;font-size:15px;font-weight:500;line-height:1.45;
+      transition:color .2s ease,transform .2s ease
+    }
+    .footer-col a:hover{color:#fff;transform:translateX(3px)}
+    .footer-bottom{
+      padding-top:25px;border-top:1px solid rgba(255,255,255,.12);
+      display:flex;justify-content:space-between;align-items:flex-start;
+      gap:30px;color:#91aea5;font-size:13px;line-height:1.6
+    }
+    .footer-status{max-width:650px;text-align:right}
+
+    @media(max-width:900px){
+      .nav-links{display:none}
+      .mobile-donate{display:inline-flex}
+      .hero{padding-top:125px}
+      .hero-grid,.info-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .cta-box{align-items:flex-start;flex-direction:column}
+      .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+      .footer-status{text-align:left}
+    }
+
+    @media(max-width:560px){
+      .container{width:min(100% - 28px,1120px)}
+      .nav-inner{height:72px}
+      .logo{font-size:23px}
+      .mobile-donate{padding:10px 16px;font-size:13px}
+      .hero{padding:112px 0 64px}
+      h1{letter-spacing:-2px}
+      .contact-section,.info-section{padding:68px 0}
+      .hero-card,.contact-card,.info-card{padding:26px}
+      .cta-box{padding:32px 26px}
+      footer{margin-top:70px;padding:48px 0 25px}
+      .footer-grid{grid-template-columns:1fr;gap:32px}
+      .footer-col h4{margin-bottom:14px}
+      .footer-col a{margin-bottom:10px}
+      .footer-bottom{flex-direction:column;gap:14px}
+      .footer-status{text-align:left}
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">LIFORA<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/our-impact">Impact</a>
+        <a href="/contact" class="active">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+
+      <a href="/donate" class="mobile-donate">Donate</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">✉️ CONTACT LIFORA</div>
+        <h1>We’re here to help.</h1>
+        <p>
+          Contact LIFORA Foundation for general enquiries, donation questions,
+          payment-related support, or information about our developing humanitarian work.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="symbol">💬</div>
+        <h2>Choose the right email for your enquiry.</h2>
+        <p>
+          Using the appropriate email address helps us keep general enquiries
+          and donation-related questions organized.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="container">
+
+      <div class="section-head">
+        <div class="section-kicker">Contact Options</div>
+        <h2>How can we help?</h2>
+        <p>
+          Select the email address that best matches your reason for contacting LIFORA.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <article class="contact-card">
+          <div class="contact-icon">📩</div>
+          <h3>General Enquiries</h3>
+          <p>
+            For general questions about LIFORA Foundation, our website,
+            future humanitarian activities, or other non-donation enquiries.
+          </p>
+          <div class="email-box">info@liforafoundation.com</div>
+
+          <a
+            class="email-button"
+            href="mailto:info@liforafoundation.com?subject=General%20Enquiry%20-%20LIFORA%20Foundation"
+          >
+            Email General Enquiries →
+          </a>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon">💚</div>
+          <h3>Donation Support</h3>
+          <p>
+            For questions about donations, bank transfers, cryptocurrency,
+            payment references, contribution records, or refund-related matters.
+          </p>
+          <div class="email-box">donation@liforafoundation.com</div>
+
+          <a
+            class="email-button"
+            href="mailto:donation@liforafoundation.com?subject=Donation%20Enquiry%20-%20LIFORA%20Foundation"
+          >
+            Email Donation Support →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="container">
+      <div class="info-grid">
+
+        <article class="info-card highlight">
+          <h3>Before sending sensitive information</h3>
+          <p>
+            Please do not send passwords, private keys, cryptocurrency seed phrases,
+            recovery phrases, full card numbers, card security codes, or online-banking passwords.
+          </p>
+          <p>
+            For payment questions, a transaction reference, bank reference,
+            or public blockchain transaction hash is usually more appropriate.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Current organizational status</h3>
+          <div class="notice">
+            <strong>Important disclosure</strong>
+            <p>
+              LIFORA Foundation is currently in organizational development and registration
+              and does not currently represent itself as a registered charity,
+              tax-exempt organization, or U.S. 501(c)(3) organization.
+              Contributions should not currently be assumed to be tax-deductible.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>Want to support LIFORA’s mission?</h2>
+          <p>
+            Review our current donation options and important giving information before contributing.
+          </p>
+        </div>
+        <a href="/donate" class="cta-button">Go to Donate Page →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">LIFORA<span>.</span></a>
+          <p>Creating hope, empowering lives and building a better world — together.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="/about">About Us</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/our-impact">Our Impact</a>
+          <a href="/donate">Donate</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <a href="/volunteer">Volunteer</a>
+          <a href="/partner-with-us">Partner With Us</a>
+          <a href="/contact">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <a href="/how-donations-are-used">How Donations Are Used</a>
+          <a href="/donation-terms">Donation Terms</a>
+          <a href="/refund-policy">Refund Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 LIFORA Foundation. All rights reserved.</div>
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development and does not currently
+          represent itself as a registered charity or tax-exempt organization.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
