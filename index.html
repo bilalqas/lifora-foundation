@@ -35,9 +35,74 @@
     }
 
     /* NAVBAR */
-    nav {
+    /* TOP MOVING HUMANITARIAN BANNER */
+    .top-ticker {
       position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
+      height: 38px;
+      z-index: 1100;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background: #102c26;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      white-space: nowrap;
+      animation: liforaTicker 32s linear infinite;
+      will-change: transform;
+    }
+
+    .ticker-group {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 28px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    .ticker-dot {
+      color: #e49b32;
+      font-size: 15px;
+    }
+
+    .top-ticker:hover .ticker-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes liforaTicker {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track {
+        animation: none;
+      }
+    }
+
+    nav {
+      position: fixed;
+      top: 38px;
       width: 100%;
       z-index: 1000;
       background: rgba(255,255,255,0.96);
@@ -50,7 +115,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
     }
 
     .logo {
@@ -87,7 +151,6 @@
       background: #0d5141;
     }
 
-    /* Always-visible Donate button for mobile */
     .mobile-top-donate {
       display: none;
       align-items: center;
@@ -111,7 +174,7 @@
 
     /* HERO */
     .hero {
-      padding: 160px 0 100px;
+      padding: 198px 0 100px;
       background:
         radial-gradient(circle at 85% 20%, #dff3e9 0, transparent 30%),
         linear-gradient(135deg, #f4fbf7, #ffffff);
@@ -452,13 +515,18 @@
         display: inline-flex;
       }
 
+      .ticker-item {
+        padding: 0 20px;
+        font-size: 12px;
+      }
+
       .hero-grid,
       .about-grid {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        padding-top: 125px;
+        padding-top: 160px;
       }
 
       .hero-card {
@@ -488,6 +556,14 @@
     }
 
     @media (max-width: 500px) {
+      .top-ticker {
+        height: 36px;
+      }
+
+      nav {
+        top: 36px;
+      }
+
       .nav-inner {
         height: 70px;
       }
@@ -500,6 +576,11 @@
         min-height: 40px;
         padding: 9px 15px;
         font-size: 13px;
+      }
+
+      .ticker-item {
+        padding: 0 16px;
+        font-size: 11px;
       }
 
       h1 {
@@ -520,12 +601,40 @@
 
 <body>
 
+  <!-- MOVING HUMANITARIAN BANNER -->
+  <div
+    class="top-ticker"
+    aria-label="LIFORA humanitarian focus areas"
+  >
+    <div class="ticker-track">
+
+      <div class="ticker-group">
+        <span class="ticker-item">🍲 Food &amp; Essential Relief <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">📚 Education &amp; Opportunity <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">🏥 Health &amp; Medical Support <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">🆘 Emergency &amp; Disaster Relief <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">🤝 Together for Humanity <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">❤️ Give Hope. Protect Dignity. <span class="ticker-dot">•</span></span>
+      </div>
+
+      <!-- Duplicate group creates a seamless continuous loop -->
+      <div class="ticker-group" aria-hidden="true">
+        <span class="ticker-item">🍲 Food &amp; Essential Relief <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">📚 Education &amp; Opportunity <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">🏥 Health &amp; Medical Support <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">🆘 Emergency &amp; Disaster Relief <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">🤝 Together for Humanity <span class="ticker-dot">•</span></span>
+        <span class="ticker-item">❤️ Give Hope. Protect Dignity. <span class="ticker-dot">•</span></span>
+      </div>
+
+    </div>
+  </div>
+
   <!-- NAVIGATION -->
   <nav>
     <div class="container nav-inner">
       <a href="/" class="logo">LIFORA<span>.</span></a>
 
-      <!-- Visible only on mobile -->
       <a
         href="/donate"
         class="mobile-top-donate"
@@ -562,7 +671,7 @@
         </p>
 
         <div class="buttons">
-          <a href="/donate" class="btn btn-primary">DONATE NOW →</a>
+          <a href="/donate" class="btn btn-primary">Make a Difference →</a>
           <a href="#about" class="btn btn-secondary">Learn About Us</a>
         </div>
       </div>
@@ -603,62 +712,66 @@
     </div>
   </section>
 
-  <!-- PROGRAMS -->
-  <section class="programs" id="programs">
-    <div class="container">
+ <!-- PROGRAMS -->
+<section class="programs" id="programs">
+  <div class="container">
 
-      <div class="section-heading">
-        <div class="eyebrow">OUR HUMANITARIAN WORK</div>
+    <div class="section-heading">
+      <div class="eyebrow">OUR HUMANITARIAN WORK</div>
 
-        <h2>Helping people where support matters most.</h2>
+      <h2>Helping people where support matters most.</h2>
 
+      <p>
+        LIFORA Foundation aims to support vulnerable individuals,
+        families and communities through practical humanitarian action.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <!-- FOOD -->
+      <div class="card">
+        <div class="icon">🍲</div>
+        <h3>Food & Essential Relief</h3>
         <p>
-          LIFORA Foundation aims to support vulnerable individuals,
-          families and communities through practical humanitarian action.
+          Supporting vulnerable families and communities with food,
+          essential supplies and basic necessities during times of hardship.
         </p>
       </div>
 
-      <div class="cards">
-
-        <div class="card">
-          <div class="icon">🍲</div>
-          <h3>Food & Essential Relief</h3>
-          <p>
-            Supporting vulnerable families and communities with food,
-            essential supplies and basic necessities during times of hardship.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">📚</div>
-          <h3>Education & Opportunity</h3>
-          <p>
-            Helping children and young people access education,
-            school supplies, learning opportunities and a brighter future.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🏥</div>
-          <h3>Health & Medical Support</h3>
-          <p>
-            Helping vulnerable people access essential healthcare,
-            medicines and medical support when assistance is needed.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">🆘</div>
-          <h3>Emergency & Disaster Relief</h3>
-          <p>
-            Responding to emergencies and disasters with food,
-            essential supplies, shelter assistance and humanitarian support.
-          </p>
-        </div>
-
+      <!-- EDUCATION -->
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Education & Opportunity</h3>
+        <p>
+          Helping children and young people access education,
+          school supplies, learning opportunities and a brighter future.
+        </p>
       </div>
+
+      <!-- HEALTH -->
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>Health & Medical Support</h3>
+        <p>
+          Helping vulnerable people access essential healthcare,
+          medicines and medical support when assistance is needed.
+        </p>
+      </div>
+
+      <!-- EMERGENCY -->
+      <div class="card">
+        <div class="icon">🆘</div>
+        <h3>Emergency & Disaster Relief</h3>
+        <p>
+          Responding to emergencies and disasters with food,
+          essential supplies, shelter assistance and humanitarian support.
+        </p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ABOUT -->
   <section id="about">
