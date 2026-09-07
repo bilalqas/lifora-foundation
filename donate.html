@@ -806,119 +806,6 @@
   font-size: 14px;
 }
 
-
-/* =========================
-   CRYPTO DONATIONS
-========================== */
-
-.crypto-section {
-  padding: 100px 0;
-  background: #f8fbfa;
-}
-
-.crypto-card {
-  max-width: 820px;
-  margin: auto;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 35px;
-  box-shadow: var(--shadow);
-}
-
-.crypto-item {
-  display: grid;
-  gap: 18px;
-}
-
-.crypto-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.crypto-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: var(--green-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-}
-
-.crypto-item strong {
-  font-size: 23px;
-  color: var(--green);
-}
-
-.crypto-item p {
-  color: var(--text-soft);
-  margin-top: 3px;
-}
-
-.wallet-box {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 15px;
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  background: var(--green-soft);
-}
-
-.wallet-box span {
-  flex: 1;
-  word-break: break-all;
-  font-family: monospace;
-  font-size: 14px;
-}
-
-.wallet-box button {
-  border: 0;
-  background: var(--green);
-  color: white;
-  padding: 11px 18px;
-  border-radius: 10px;
-  font-weight: 700;
-}
-
-.wallet-box button:hover {
-  background: var(--green-dark);
-}
-
-.crypto-warning {
-  margin-top: 22px;
-  padding: 18px;
-  border-radius: 15px;
-  background: var(--gold-light);
-  color: #74511c;
-  font-size: 13px;
-}
-
-.crypto-status {
-  margin-top: 18px;
-  font-size: 12px;
-  color: var(--text-soft);
-  line-height: 1.6;
-}
-
-@media (max-width: 600px) {
-  .wallet-box {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .wallet-box button {
-    width: 100%;
-  }
-}
-
-
-/* =========================
-   FAQ
-========================= */
     /* =========================
        FAQ
     ========================== */
@@ -1165,6 +1052,113 @@
         font-size: 29px;
       }
     }
+    /* =========================
+   CRYPTO DONATIONS
+========================== */
+
+.crypto-section {
+  padding: 100px 0;
+  background: #f8fbfa;
+}
+
+.crypto-card {
+  max-width: 820px;
+  margin: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 35px;
+  box-shadow: var(--shadow);
+}
+
+.crypto-item {
+  display: grid;
+  gap: 18px;
+}
+
+.crypto-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.crypto-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.crypto-item strong {
+  font-size: 23px;
+  color: var(--green);
+}
+
+.crypto-item p {
+  color: var(--text-soft);
+  margin-top: 3px;
+}
+
+.wallet-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--green-soft);
+}
+
+.wallet-box span {
+  flex: 1;
+  word-break: break-all;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.wallet-box button {
+  border: 0;
+  background: var(--green);
+  color: white;
+  padding: 11px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.wallet-box button:hover {
+  background: var(--green-dark);
+}
+
+.crypto-warning {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 15px;
+  background: var(--gold-light);
+  color: #74511c;
+  font-size: 13px;
+}
+
+.crypto-status {
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .wallet-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wallet-box button {
+    width: 100%;
+  }
+}
   </style>
 </head>
 
@@ -1829,7 +1823,93 @@
 
     </section>
 
+<!-- =========================
+     CRYPTO DONATIONS
+========================== -->
 
+<section class="crypto-section" id="crypto">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        CRYPTO DONATIONS
+      </div>
+
+      <h2>
+        Support LIFORA with cryptocurrency
+      </h2>
+
+      <p>
+        Cryptocurrency contributions can help support LIFORA Foundation's
+        humanitarian mission. Please verify the wallet address and network
+        carefully before sending.
+      </p>
+
+    </div>
+
+
+    <div class="crypto-card">
+
+      <div class="crypto-item">
+
+        <div class="crypto-title">
+
+          <div class="crypto-logo">
+            ₮
+          </div>
+
+          <div>
+            <strong>USDT</strong>
+            <p>Network: TRC20</p>
+          </div>
+
+        </div>
+
+
+        <div class="wallet-box">
+
+          <span id="usdtWallet">
+            TMSRiBxHMLdohQczQSdfMobEpYD9xJpC4V
+          </span>
+
+          <button
+            type="button"
+            onclick="copyWallet('usdtWallet', this)"
+          >
+            Copy Address
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="crypto-warning">
+
+        <strong>Important:</strong>
+
+        Only send USDT using the TRC20 network to this wallet.
+        Sending another cryptocurrency or using an incompatible network
+        may result in permanent loss of funds.
+
+      </div>
+
+
+      <div class="crypto-status">
+
+        LIFORA Foundation is currently completing its organizational
+        development and registration. Cryptocurrency contributions are
+        not currently represented as tax-deductible donations.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
     <!-- =========================
          FAQ
     ========================== -->
@@ -2334,7 +2414,30 @@
 
 
     updateSummary();
+function copyWallet(elementId, button) {
 
+  const wallet =
+    document.getElementById(elementId).textContent.trim();
+
+  navigator.clipboard.writeText(wallet)
+    .then(() => {
+
+      const originalText = button.textContent;
+
+      button.textContent = "Copied ✓";
+
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 2000);
+
+    })
+    .catch(() => {
+
+      alert("Please copy the wallet address manually.");
+
+    });
+
+}
   </script>
 
 </body>
