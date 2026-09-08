@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Not Found | LIFORA Foundation</title>
+  <meta name="description" content="The page you requested could not be found. Return to LIFORA Foundation or explore our main pages.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#126b55">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="alternate icon" type="image/svg+xml" href="/favicon.svg">
+
+  <style>
+    :root {
+      --green: #126b55;
+      --green-dark: #0a3028;
+      --green-hover: #0d5141;
+      --green-soft: #e4f4ed;
+      --gold: #e49b32;
+      --text: #18352f;
+      --muted: #667873;
+      --border: #e5ece9;
+      --white: #ffffff;
+      --bg: #f7faf8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: var(--green);
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-actions a:not(.donate-nav):hover {
+      color: var(--green);
+    }
+
+    .donate-nav {
+      padding: 11px 20px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--white);
+      transition: .2s ease;
+    }
+
+    .donate-nav:hover {
+      background: var(--green-hover);
+      transform: translateY(-1px);
+    }
+
+    /* MAIN 404 */
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 90px 0 110px;
+      background:
+        radial-gradient(circle at 85% 18%, rgba(18,107,85,.12), transparent 28%),
+        radial-gradient(circle at 12% 82%, rgba(228,155,50,.10), transparent 24%),
+        linear-gradient(180deg, #f5fbf8 0%, #ffffff 100%);
+    }
+
+    .error-shell {
+      width: min(900px, 100%);
+      text-align: center;
+    }
+
+    .error-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 8px 15px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .error-code {
+      font-size: clamp(92px, 18vw, 180px);
+      line-height: .85;
+      letter-spacing: -8px;
+      font-weight: 900;
+      color: var(--green);
+      opacity: .12;
+      margin-bottom: -18px;
+      user-select: none;
+    }
+
+    .error-card {
+      position: relative;
+      margin: 0 auto;
+      padding: 48px 44px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 24px 70px rgba(18,107,85,.12);
+    }
+
+    .error-icon {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 22px;
+      background: var(--green-soft);
+      font-size: 34px;
+    }
+
+    h1 {
+      margin-bottom: 14px;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+    }
+
+    .lead {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .path-note {
+      display: none;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: var(--bg);
+      color: var(--muted);
+      font-size: 13px;
+      word-break: break-word;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      border: 1px solid #cad8d3;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--green);
+      color: var(--green);
+      transform: translateY(-2px);
+    }
+
+    .quick-links {
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .quick-links p {
+      margin-bottom: 13px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+    }
+
+    .quick-links-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+
+    .quick-links-list a {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .quick-links-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 64px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.45fr .9fr .95fr 1.2fr;
+      gap: 48px;
+      padding-bottom: 46px;
+    }
+
+    .footer-about .logo {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--white);
+      font-size: 28px;
+      letter-spacing: -.5px;
+    }
+
+    .footer-about p {
+      max-width: 330px;
+      color: #b9d4cc;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      margin-bottom: 20px;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .footer-links a {
+      color: #b9d4cc;
+      font-size: 15px;
+      font-weight: 500;
+      transition: .2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+      transform: translateX(3px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 30px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: #91aea5;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .footer-status {
+      max-width: 650px;
+      text-align: right;
+    }
+
+    @media (max-width: 850px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 38px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-actions a:not(.donate-nav) {
+        display: none;
+      }
+
+      main {
+        padding: 65px 0 80px;
+      }
+
+      .error-card {
+        padding: 36px 22px;
+        border-radius: 24px;
+      }
+
+      .error-code {
+        letter-spacing: -4px;
+        margin-bottom: -8px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .footer-status {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo" aria-label="LIFORA Foundation home">LIFORA<span>.</span></a>
+
+      <div class="nav-actions">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/donate" class="donate-nav">Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="error-shell">
+
+        <div class="error-badge">PAGE NOT FOUND</div>
+        <div class="error-code" aria-hidden="true">404</div>
+
+        <section class="error-card" aria-labelledby="error-title">
+          <div class="error-icon" aria-hidden="true">🌍</div>
+
+          <h1 id="error-title">We couldn't find that page.</h1>
+
+          <p class="lead">
+            The page may have moved, the link may be outdated, or the address may have been entered incorrectly.
+            You can return to the LIFORA Foundation homepage or explore one of the links below.
+          </p>
+
+          <div class="path-note" id="pathNote"></div>
+
+          <div class="buttons">
+            <a href="/" class="btn btn-primary">Return Home →</a>
+            <a href="/contact" class="btn btn-secondary">Contact Us</a>
+          </div>
+
+          <div class="quick-links">
+            <p>Explore LIFORA</p>
+            <div class="quick-links-list">
+              <a href="/about">About Us</a>
+              <a href="/our-work">Our Work</a>
+              <a href="/our-impact">Our Impact</a>
+              <a href="/donate">Donate</a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="/" class="logo">LIFORA<span>.</span></a>
+          <p>
+            Creating hope, empowering lives and building a better world — together.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="/about">About Us</a>
+            <a href="/our-work">Our Work</a>
+            <a href="/our-impact">Our Impact</a>
+            <a href="/donate">Donate</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <div class="footer-links">
+            <a href="/volunteer">Volunteer</a>
+            <a href="/partner-with-us">Partner With Us</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Trust &amp; Legal</h4>
+          <div class="footer-links">
+            <a href="/how-donations-are-used">How Donations Are Used</a>
+            <a href="/donation-terms">Donation Terms</a>
+            <a href="/refund-policy">Refund Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 LIFORA Foundation. All rights reserved.</div>
+
+        <div class="footer-status">
+          LIFORA Foundation is currently in organizational development and does not currently
+          represent itself as a registered charity or tax-exempt organization.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var path = window.location.pathname;
+
+      if (path && path !== "/404.html") {
+        var note = document.getElementById("pathNote");
+        note.textContent = "Requested address: " + path;
+        note.style.display = "block";
+      }
+    })();
+  </script>
+
+</body>
+</html>
