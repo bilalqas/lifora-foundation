@@ -1130,24 +1130,24 @@
     <div class="container stats-grid">
 
       <div class="stat">
-        <strong>0+</strong>
-        <span>Lives Reached</span>
-      </div>
+  <strong id="livesReached">0</strong>
+  <span>Lives Reached</span>
+</div>
 
-      <div class="stat">
-        <strong>0+</strong>
-        <span>Projects</span>
-      </div>
+<div class="stat">
+  <strong id="projects">0</strong>
+  <span>Projects</span>
+</div>
 
-      <div class="stat">
-        <strong>0+</strong>
-        <span>Volunteers</span>
-      </div>
+<div class="stat">
+  <strong id="volunteers">0</strong>
+  <span>Volunteers</span>
+</div>
 
-      <div class="stat">
-        <strong>0</strong>
-        <span>Countries</span>
-      </div>
+<div class="stat">
+  <strong id="countries">0</strong>
+  <span>Countries</span>
+</div>
 
     </div>
   </section>
@@ -1482,6 +1482,32 @@
       startAuto();
     });
   </script>
+<script>
+  fetch('/stats.json')
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('Unable to load statistics');
+      }
 
+      return response.json();
+    })
+    .then(function(stats) {
+      document.getElementById('livesReached').textContent =
+        Number(stats.livesReached || 0).toLocaleString();
+
+      document.getElementById('projects').textContent =
+        Number(stats.projects || 0).toLocaleString();
+
+      document.getElementById('volunteers').textContent =
+        Number(stats.volunteers || 0).toLocaleString();
+
+      document.getElementById('countries').textContent =
+        Number(stats.countries || 0).toLocaleString();
+    })
+    .catch(function(error) {
+      console.error('LIFORA statistics could not be loaded:', error);
+    });
+</script>
+  
 </body>
 </html>
